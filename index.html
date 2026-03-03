@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Trust Commons - Open-Source Governance for AI Agents</title>
+    <meta name="description" content="Cross-provider governance and compliance framework for AI agents in the enterprise. Standards-mapped, machine-readable, open source.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700&amp;family=DM+Serif+Display&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0a1628; --slate: #1a2740; --steel: #2d3f59;
+            --mist: #8899b3; --cloud: #c4cfde; --white: #f0f3f7;
+            --accent: #3b82f6; --accent-dim: #2563eb;
+            --glow: rgba(59, 130, 246, 0.08);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'DM Sans', sans-serif; background: var(--navy); color: var(--cloud); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+        nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 1.2rem 2rem; background: rgba(10, 22, 40, 0.85); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(59, 130, 246, 0.1); }
+        nav .nav-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        nav .logo { font-family: 'DM Serif Display', serif; font-size: 1.25rem; color: var(--white); text-decoration: none; letter-spacing: -0.01em; }
+        nav .logo span { color: var(--accent); }
+        nav .nav-links { display: flex; gap: 2rem; list-style: none; }
+        nav .nav-links a { color: var(--mist); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+        nav .nav-links a:hover { color: var(--white); }
+        .hero { padding: 10rem 2rem 6rem; max-width: 1100px; margin: 0 auto; }
+        .hero-label { display: inline-block; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem; padding: 0.4rem 1rem; border: 1px solid rgba(59, 130, 246, 0.25); border-radius: 100px; }
+        .hero h1 { font-family: 'DM Serif Display', serif; font-size: clamp(2.4rem, 5vw, 3.8rem); color: var(--white); line-height: 1.15; max-width: 780px; margin-bottom: 1.5rem; letter-spacing: -0.02em; }
+        .hero p { font-size: 1.15rem; max-width: 640px; color: var(--mist); margin-bottom: 2.5rem; }
+        .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 1.75rem; border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: 0.95rem; font-weight: 600; text-decoration: none; transition: all 0.2s; }
+        .btn-primary { background: var(--accent); color: #fff; }
+        .btn-primary:hover { background: var(--accent-dim); transform: translateY(-1px); }
+        .btn-outline { border: 1px solid var(--steel); color: var(--cloud); }
+        .btn-outline:hover { border-color: var(--mist); color: var(--white); }
+        .btn svg { width: 18px; height: 18px; }
+        .stats { padding: 0 2rem 5rem; max-width: 1100px; margin: 0 auto; }
+        .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--steel); border-radius: 12px; overflow: hidden; }
+        .stat-card { padding: 2rem 2.5rem; background: var(--slate); }
+        .stat-card .number { font-family: 'DM Serif Display', serif; font-size: 2.4rem; color: var(--accent); margin-bottom: 0.3rem; }
+        .stat-card .label { font-size: 0.9rem; color: var(--mist); }
+        section { padding: 5rem 2rem; max-width: 1100px; margin: 0 auto; }
+        .section-label { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
+        section h2 { font-family: 'DM Serif Display', serif; font-size: clamp(1.8rem, 3.5vw, 2.6rem); color: var(--white); margin-bottom: 1.25rem; letter-spacing: -0.01em; }
+        section > p { font-size: 1.05rem; max-width: 680px; color: var(--mist); margin-bottom: 3rem; }
+        .capabilities-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+        .capability { padding: 2rem; background: var(--slate); border-radius: 12px; border: 1px solid transparent; transition: border-color 0.3s; }
+        .capability:hover { border-color: rgba(59, 130, 246, 0.2); }
+        .capability h3 { font-size: 1.1rem; font-weight: 600; color: var(--white); margin-bottom: 0.75rem; }
+        .capability p { font-size: 0.95rem; color: var(--mist); line-height: 1.65; }
+        .capability .icon { width: 40px; height: 40px; background: var(--glow); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; color: var(--accent); }
+        .standards-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+        .standard-item { padding: 1.5rem; background: var(--slate); border-radius: 10px; }
+        .standard-item h4 { font-size: 0.95rem; font-weight: 600; color: var(--white); margin-bottom: 0.4rem; }
+        .standard-item p { font-size: 0.85rem; color: var(--mist); line-height: 1.55; }
+        .founder-card { display: flex; gap: 2.5rem; align-items: flex-start; max-width: 800px; }
+        .founder-card .bio { flex: 1; }
+        .founder-card .bio h3 { font-family: 'DM Serif Display', serif; font-size: 1.6rem; color: var(--white); margin-bottom: 0.25rem; }
+        .founder-card .bio .title { font-size: 0.9rem; color: var(--accent); font-weight: 500; margin-bottom: 1rem; }
+        .founder-card .bio p { font-size: 0.95rem; color: var(--mist); line-height: 1.7; margin-bottom: 1.25rem; }
+        .founder-links { display: flex; gap: 1.25rem; }
+        .founder-links a { color: var(--cloud); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+        .founder-links a:hover { color: var(--accent); }
+        footer { padding: 3rem 2rem; max-width: 1100px; margin: 0 auto; border-top: 1px solid rgba(45, 63, 89, 0.5); display: flex; justify-content: space-between; align-items: center; }
+        footer p { font-size: 0.85rem; color: var(--mist); }
+        footer .footer-links { display: flex; gap: 1.5rem; }
+        footer a { color: var(--mist); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+        footer a:hover { color: var(--white); }
+        .divider { width: 100%; max-width: 1100px; margin: 0 auto; height: 1px; background: var(--steel); }
+        @media (max-width: 768px) {
+            .stats-grid { grid-template-columns: 1fr; }
+            .capabilities-grid { grid-template-columns: 1fr; }
+            .standards-list { grid-template-columns: 1fr; }
+            .founder-card { flex-direction: column; }
+            nav .nav-links { display: none; }
+            footer { flex-direction: column; gap: 1rem; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
+            <a href="/" class="logo">AI Trust <span>Commons</span></a>
+            <ul class="nav-links">
+                <li><a href="https://github.com/aitrustcommons/governance-framework">GitHub</a></li>
+                <li><a href="#capabilities">Framework</a></li>
+                <li><a href="#standards">Standards</a></li>
+                <li><a href="#founder">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="hero-label">Open Source Initiative</div>
+        <h1>Governance for AI agents that works across providers</h1>
+        <p>Enterprise AI agents operate across AWS, Azure, and GCP &mdash; but every vendor's governance covers only their own platform. AI Trust Commons builds the cross-provider compliance layer that's missing.</p>
+        <div class="hero-actions">
+            <a href="https://github.com/aitrustcommons/governance-framework" class="btn btn-primary">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                View on GitHub
+            </a>
+            <a href="#capabilities" class="btn btn-outline">Learn More</a>
+        </div>
+    </div>
+
+    <div class="stats">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="number">80%</div>
+                <div class="label">of Fortune 500 companies deploy active AI agents</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">14.4%</div>
+                <div class="label">go live with full security and IT approval</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">88%</div>
+                <div class="label">report confirmed or suspected agent security incidents</div>
+            </div>
+        </div>
+    </div>
+
+    <section id="capabilities">
+        <div class="section-label">Framework</div>
+        <h2>What we're building</h2>
+        <p>A governance layer that sits between AI agents and the tools they access &mdash; enforcing policies, generating audit trails, and mapping compliance across providers and standards.</p>
+        <div class="capabilities-grid">
+            <div class="capability">
+                <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 0 1 0 10h-2m-7-5h8"/></svg></div>
+                <h3>Standards Mapping</h3>
+                <p>Authoritative crosswalk across OWASP Top 10 for Agentic Applications, NIST AI RMF, SOC 2, and EU AI Act. Implement one control, get credit across multiple audits.</p>
+            </div>
+            <div class="capability">
+                <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+                <h3>Policy-as-Code</h3>
+                <p>Machine-readable compliance that operates at AI speed. Governance as a guardrail agents run alongside &mdash; not a gate teams stop and open.</p>
+            </div>
+            <div class="capability">
+                <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+                <h3>Cross-Provider Audit Trails</h3>
+                <p>Structured logs of what agents did, what data they accessed, and why &mdash; in a standard format that works across AWS, Azure, GCP, and hybrid environments.</p>
+            </div>
+            <div class="capability">
+                <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+                <h3>OWASP Validation</h3>
+                <p>Automated validation against the OWASP Top 10 for Agentic Applications &mdash; from agent goal hijack to cascading failures.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section id="standards">
+        <div class="section-label">Standards Engagement</div>
+        <h2>Shaping the governance landscape</h2>
+        <p>AI Trust Commons engages directly with the standards bodies defining AI agent governance &mdash; contributing practitioner experience to shape policy.</p>
+        <div class="standards-list">
+            <div class="standard-item">
+                <h4>NIST</h4>
+                <p>Active participant in the AI Agent Standards Initiative. Public comment submitted to CAISI RFI on AI Agent Security. NCCoE Identity and Authorization comment in preparation.</p>
+            </div>
+            <div class="standard-item">
+                <h4>OWASP</h4>
+                <p>Contributing to the MCP Top 10 project and the Agentic Security Initiative &mdash; the benchmark framework for autonomous AI security.</p>
+            </div>
+            <div class="standard-item">
+                <h4>EU AI Act</h4>
+                <p>Article 50 transparency compliance tooling for high-risk AI systems. Compliance deadline August 2026.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section id="founder">
+        <div class="section-label">Founded By</div>
+        <div class="founder-card">
+            <div class="bio">
+                <h3>Nikhil Singhal</h3>
+                <div class="title">CTO / VP Engineering / Seattle, WA</div>
+                <p>25 years leading engineering organizations at Microsoft, AT&amp;T, T-Mobile, Expedia Group, and Hitachi Consulting. Building AI-powered products daily with Claude Code, GitHub Copilot, and MCP servers.</p>
+                <p>I founded AI Trust Commons because the cross-provider governance layer the industry needs is something no single vendor will build. Every vendor solves for their own platform. This project solves for the enterprise that operates across all of them.</p>
+                <div class="founder-links">
+                    <a href="https://linkedin.com/in/nikhilsinghal">LinkedIn &rarr;</a>
+                    <a href="https://github.com/nikhilsi">GitHub &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 AI Trust Commons. Apache 2.0 License.</p>
+        <div class="footer-links">
+            <a href="https://github.com/aitrustcommons/governance-framework">GitHub</a>
+            <a href="https://linkedin.com/in/nikhilsinghal">Contact</a>
+        </div>
+    </footer>
+</body>
+</html>
