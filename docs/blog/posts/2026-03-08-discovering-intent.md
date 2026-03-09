@@ -247,7 +247,7 @@ And that starts, as it did for Neo, as it did for me on a Tuesday at 2 AM, not w
 
 ---
 
-*Nikhil Singhal is the founder of AI Trust Commons and the author of a formal public comment to NIST on AI agent security (DOI: 10.5281/zenodo.18903117). He has spent 25 years in engineering leadership at Microsoft, T-Mobile, AT&T, Expedia, and others, and has shipped eight AI-powered products in the past three months. He writes about the intersection of human purpose and machine capability at aitrustcommons.org.*
+*Nikhil Singhal is the founder of AI Trust Commons and the author of a formal public comment to NIST on AI agent security (DOI: 10.5281/zenodo.18903117) and the From Instinct to Intent™ manifesto (DOI: 10.5281/zenodo.18917473). He has spent 25 years in engineering leadership at Microsoft, T-Mobile, AT&T, Expedia, and others, and has shipped eight AI-powered products in the past three months. He writes about the intersection of human purpose and machine capability at aitrustcommons.org.*
 
 ---
 
@@ -263,3 +263,13 @@ And that starts, as it did for Neo, as it did for me on a Tuesday at 2 AM, not w
 8. IAPP, Global AI Law and Policy Tracker (2026)
 9. Senate Commerce Committee, Nomination hearing for Arvind Raman, NIST Director nominee (March 5, 2026)
 10. Australian Government Department of Industry, Science and Resources, National AI Plan (December 2025); IAPP, "Australia unveils AI policy roadmap" (December 2025)
+
+---
+
+**Published simultaneously on:**
+
+[Medium](https://nikhilsinghal-ai-trust-commons.medium.com/discovering-intent-the-journey-that-starts-before-youre-ready-4a8a69fce594)
+
+[Zenodo — DOI: 10.5281/zenodo.18917473](https://doi.org/10.5281/zenodo.18917473)
+
+[NIST Public Comment — DOI: 10.5281/zenodo.18903117](https://doi.org/10.5281/zenodo.18903117)
