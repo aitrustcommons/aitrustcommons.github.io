@@ -1,5 +1,5 @@
 ---
-date: 2026-03-09
+date: 2026-03-08
 slug: discovering-intent
 categories:
   - From Instinct to Intent Series
