@@ -273,5 +273,3 @@ And that starts, as it did for Neo, as it did for me on a Tuesday at 2 AM, not w
 [Medium](https://nikhilsinghal-ai-trust-commons.medium.com/discovering-intent-the-journey-that-starts-before-youre-ready-4a8a69fce594)
 
 [Zenodo — DOI: 10.5281/zenodo.18917473](https://doi.org/10.5281/zenodo.18917473)
-
-[NIST Public Comment — DOI: 10.5281/zenodo.18903117](https://doi.org/10.5281/zenodo.18903117)
