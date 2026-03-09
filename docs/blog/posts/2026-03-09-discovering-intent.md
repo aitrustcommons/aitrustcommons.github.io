@@ -1,5 +1,6 @@
 ---
 date: 2026-03-09
+slug: discovering-intent
 categories:
   - From Instinct to Intent Series
 authors:
