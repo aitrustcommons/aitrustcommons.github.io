@@ -13,6 +13,8 @@ image: assets/images/hero-image.png
 
 **FROM INSTINCT TO INTENT™ SERIES**
 
+![Hero image](../../assets/images/hero-image.png)
+
 There's a scene near the end of The Matrix where Neo stops running.
 
 For the entire film, he's been reacting. Dodging bullets. Learning combat. Surviving on instinct. He doesn't know what he wants. Not really. He knows something is wrong. He knows the world isn't what it seems. He has a question he can't stop asking: *What is the Matrix?* But a question isn't intent. It's the seed of intent. It's the thing that won't let you sleep, that pulls you forward, or drags you back, before you understand where you're going.
