@@ -310,6 +310,14 @@ That compression problem does not go away with better models. It goes away with 
 
 ---
 
+**Published simultaneously on:**
+
+[Medium](https://medium.com/@nikhilsinghal-ai-trust-commons/we-are-making-ai-write-code-in-languages-designed-for-humans-that-is-the-problem-d6721ab296ad)
+
+[Zenodo — DOI: 10.5281/zenodo.19005877](https://doi.org/10.5281/zenodo.19005877)
+
+---
+
 *This is the second article in the From Instinct to Intent™ series. The first, "Discovering Intent: The Journey That Starts Before You Are Ready," is available on [Medium](https://nikhilsinghal-ai-trust-commons.medium.com/discovering-intent-the-journey-that-starts-before-youre-ready-4a8a69fce594) and [aitrustcommons.org](https://aitrustcommons.org/blog/2026/03/08/discovering-intent/).*
 
 *Nikhil Singhal is the founder of AI Trust Commons and a technology executive with 25+ years of engineering leadership. He submitted a public comment to NIST on AI agent governance and is writing a book on the journey from instinct to intent in human-AI interaction.*
