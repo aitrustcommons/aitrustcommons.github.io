@@ -161,9 +161,9 @@ I do not know who will build it. I do not know what it will look like. But I kno
 
 **Published simultaneously on:**
 
-Medium (link forthcoming)
+[Medium](https://nikhilsinghal-ai-trust-commons.medium.com/everyone-is-arguing-about-the-engine-who-is-building-the-steering-wheel-ai-trust-commons-c7b81a7430f0)
 
-Zenodo (DOI forthcoming)
+[Zenodo — DOI: 10.5281/zenodo.19025149](https://doi.org/10.5281/zenodo.19025149)
 
 ---
 
