@@ -65,7 +65,7 @@ I have been looking at that question through the lens of everything I have built
 
 Four patterns kept emerging. Not layers in a hierarchy. Not steps on a ladder. Petals of a bloom. Each valuable on its own, the overlaps creating depth, and the center where all four converge is where full partnership lives.
 
-I call it the Human Intelligence Partnership Charter. The HIP Charter.
+I call it the Human Intelligence Partnership Charter. The HIP Charter. The full charter is at [hipcharter.com](https://hipcharter.com).
 
 **Foundation: AI as Build Partner.** The human architects, designs, and steers. The AI implements. Human judgment drives every decision. This is the daily practice of two intelligences working side by side. A developer pair-programming with AI. An architect sketching while AI implements. A writer outlining while AI drafts. If you have spent a full day building with AI, you have been here. This is where the relationship starts.
 
