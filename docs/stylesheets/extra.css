@@ -62,8 +62,9 @@
 }
 
 /* --- Blog author avatar fix --- */
-.md-post .md-author img,
-.md-post__meta .md-author img {
+.md-author img {
+  width: 100% !important;
+  height: 100% !important;
   object-fit: cover;
   object-position: center top;
 }
