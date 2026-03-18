@@ -1,3 +1,8 @@
+---
+title: "Governance Framework: Cross-Provider AI Agent Compliance"
+description: "Four pillars of cross-provider AI governance: Standards Mapping, Policy-as-Code, Cross-Provider Audit Trails, and OWASP Validation. Open source, Apache 2.0."
+---
+
 # Framework
 
 AI Trust Commons is building the cross-provider governance layer that no single vendor will build. Every major cloud vendor publishes AI agent governance guidance for their own platform. None addresses what happens at the seams between providers.

@@ -1,4 +1,5 @@
 ---
+title: "AI Trust Commons: Cross-Provider Governance for AI Agents"
 hide:
   - navigation
   - toc

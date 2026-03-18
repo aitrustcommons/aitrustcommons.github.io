@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {% set og_title = page.meta.title if page and page.meta and page.meta.title else (page.title if page and page.title else config.site_name) %}
+  {% set og_desc = page.meta.description if page and page.meta and page.meta.description else config.site_description %}
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ config.site_name }}">
+  <meta property="og:title" content="{{ og_title }}">
+  <meta property="og:description" content="{{ og_desc }}">
+  {% if page and page.canonical_url %}
+  <meta property="og:url" content="{{ page.canonical_url }}">
+  {% endif %}
+  <meta property="og:image" content="https://aitrustcommons.org/assets/images/hero-image.png">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ og_title }}">
+  <meta name="twitter:description" content="{{ og_desc }}">
+  <meta name="twitter:image" content="https://aitrustcommons.org/assets/images/hero-image.png">
+  <meta name="twitter:site" content="@nikhilsinghal">
+
+  <!-- Additional SEO -->
+  <meta name="author" content="Nikhil Singhal">
+  <meta name="keywords" content="AI Trust Commons, AI governance, AI agent security, cross-provider compliance, NIST, OWASP, Intent Layer, From Instinct to Intent">
+{% endblock %}

@@ -1,3 +1,8 @@
+---
+title: "Standards Engagement: NIST, OWASP, EU AI Act"
+description: "AI Trust Commons engages with NIST AI Agent Standards Initiative, OWASP MCP Top 10, and EU AI Act Article 50 transparency compliance."
+---
+
 # Standards Engagement
 
 AI Trust Commons engages directly with the standards bodies defining AI agent governance, contributing practitioner experience to shape policy.

@@ -1,3 +1,8 @@
+---
+title: "About AI Trust Commons"
+description: "Founded by Nikhil Singhal. 25 years of engineering leadership. Building the cross-provider AI governance layer no single vendor will build."
+---
+
 # About
 
 ## Founder

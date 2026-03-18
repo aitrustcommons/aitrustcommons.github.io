@@ -54,6 +54,9 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - admonition
   - pymdownx.details
   - attr_list
@@ -71,6 +74,9 @@ extra:
       link: mailto:nikhil@aitrustcommons.org
 
 copyright: "&copy; 2026 AI Trust Commons. Apache 2.0 License."
+
+extra_css:
+  - stylesheets/extra.css
 
 nav:
   - Home: index.md
