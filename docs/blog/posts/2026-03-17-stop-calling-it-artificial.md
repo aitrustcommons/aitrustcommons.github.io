@@ -223,6 +223,8 @@ We have been using AI as shorthand for a long time now. It is time to use it as 
 
 *This is the fourth article in the From Instinct to Intent™ series. Previous articles: "Discovering Intent," "Languages Designed for Humans," and "Everyone Is Arguing About the Engine" are available on [Medium](https://nikhilsinghal-ai-trust-commons.medium.com/) and [aitrustcommons.org](https://aitrustcommons.org/blog/).*
 
+*Also published on [Medium](https://nikhilsinghal-ai-trust-commons.medium.com/stop-calling-it-artificial-start-building-with-intelligence-ai-trust-commons-3c163ef80461) · [Zenodo](https://doi.org/10.5281/zenodo.19079578) (DOI: 10.5281/zenodo.19079578)*
+
 *The full Human Intelligence Partnership Charter is published at [hipcharter.com](https://hipcharter.com). Also available on [Medium](https://nikhilsinghal-ai-trust-commons.medium.com/the-human-intelligence-partnership-charter-3cb893e1d5f0) and [Zenodo](https://doi.org/10.5281/zenodo.19078843) (DOI: 10.5281/zenodo.19078843).*
 
 *Nikhil Singhal is the founder of AI Trust Commons and a technology executive with 25+ years of engineering leadership. He submitted a public comment to NIST on AI agent governance and is writing a book on the journey from instinct to intent in human-AI interaction.*
