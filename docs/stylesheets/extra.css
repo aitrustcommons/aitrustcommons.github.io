@@ -61,6 +61,13 @@
   margin: 1rem 0;
 }
 
+/* --- Blog author avatar fix --- */
+.md-post .md-author img,
+.md-post__meta .md-author img {
+  object-fit: cover;
+  object-position: center top;
+}
+
 /* --- Footer --- */
 .md-footer-meta {
   font-size: 0.8rem;
