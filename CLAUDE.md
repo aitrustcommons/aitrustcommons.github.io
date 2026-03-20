@@ -82,3 +82,6 @@ mkdocs gh-deploy      # Deploy to gh-pages branch
 - See `CONTEXT.md` for what AI Trust Commons is and why it exists
 - See `MKDOCS_SETUP.md` for detailed migration instructions
 - See `WORKSTREAM_PLAN.md` for the full timeline and publishing sequence
+
+
+- Before beginning implementation, check with your project lead for any cross-session context or coordination notes that may affect this work.
