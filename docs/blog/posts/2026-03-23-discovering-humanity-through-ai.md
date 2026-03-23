@@ -91,6 +91,6 @@ That was the evening I discovered my humanity through AI.
 
 *This is the fifth article in the From Instinct to Intent™ series. Previous articles: "[Discovering Intent](../2026-03-08-discovering-intent/)," "[Languages Designed for Humans](../2026-03-13-languages-designed-for-humans/)," "[Everyone Is Arguing About the Engine](../2026-03-14-engine-vs-steering-wheel/)," and "[Stop Calling It Artificial](../2026-03-17-stop-calling-it-artificial/)" are available on [Medium](https://nikhilsinghal-ai-trust-commons.medium.com/) and [aitrustcommons.org](https://aitrustcommons.org/blog/).*
 
-*Also published on [Medium](https://nikhilsinghal-ai-trust-commons.medium.com/) · Zenodo DOI forthcoming*
+*Also published on [Medium](https://nikhilsinghal-ai-trust-commons.medium.com/discovering-humanity-through-ai-1cec17e21be5) · Zenodo DOI forthcoming*
 
 *Nikhil Singhal is the founder of AI Trust Commons and a technology executive with 25+ years of engineering leadership. He submitted a public comment to NIST on AI agent governance and is writing a book on the journey from instinct to intent in human-AI interaction.*
