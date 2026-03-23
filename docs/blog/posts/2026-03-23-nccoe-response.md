@@ -2,7 +2,7 @@
 date: 2026-03-23
 slug: nccoe-ai-agent-identity-authorization-response
 categories:
-  - Standards Engagement
+  - Standards
 authors:
   - nikhil
 description: "Response to the NCCoE concept paper on AI agent identity and authorization. The paper proposes intent conveyance as the missing layer: agents authenticate and get authorized, but nothing in the identity stack evaluates whether their actions match the purpose they were authorized for."
