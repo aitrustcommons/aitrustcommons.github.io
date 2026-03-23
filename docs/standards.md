@@ -19,7 +19,7 @@ AI Trust Commons engages directly with the standards bodies defining AI agent go
 
     Active participant in the AI Agent Standards Initiative. Public comment submitted to the CAISI RFI on AI Agent Security ([DOI: 10.5281/zenodo.18903117](https://doi.org/10.5281/zenodo.18903117)). Listening session request submitted.
 
-    NCCoE Identity and Authorization concept paper in preparation, addressing how AI agents authenticate and authorize across provider boundaries. **Deadline: April 2, 2026.**
+    NCCoE Identity and Authorization concept paper response submitted, proposing intent conveyance as the missing layer in AI agent authorization. **[DOI: 10.5281/zenodo.19197399](https://doi.org/10.5281/zenodo.19197399)**
 
 -   :material-shield-bug:{ .lg .middle } __OWASP__
 
@@ -46,4 +46,4 @@ AI Trust Commons engages directly with the standards bodies defining AI agent go
 | Submission | Channel | Reference |
 |-----------|---------|-----------|
 | NIST RFI on AI Agent Governance (~5,000 words) | [regulations.gov](https://www.regulations.gov/comment/NIST-2025-0035-0352) | [DOI: 10.5281/zenodo.18903117](https://doi.org/10.5281/zenodo.18903117) |
-| NCCoE Identity and Authorization concept paper | AI-Identity@nist.gov | In preparation (April 2, 2026) |
+| NCCoE Identity and Authorization response (~5,900 words) | [AI-Identity@nist.gov](mailto:AI-Identity@nist.gov) | [DOI: 10.5281/zenodo.19197399](https://doi.org/10.5281/zenodo.19197399) |
