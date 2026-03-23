@@ -10,7 +10,7 @@ description: "Response to the NCCoE concept paper on AI agent identity and autho
 
 # Response to NCCoE Concept Paper: Intent Conveyance as the Missing Layer in AI Agent Identity and Authorization
 
-**STANDARDS ENGAGEMENT**
+**FROM INSTINCT TO INTENT™ SERIES**
 
 *Nikhil Singhal · March 2026*
 
