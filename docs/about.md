@@ -44,6 +44,7 @@ The core thesis: the bottleneck in AI is no longer the technology. It is humanit
 | 2 | [Languages Designed for Humans](https://aitrustcommons.org/blog/2026/03/13/languages-designed-for-humans/) | [10.5281/zenodo.19005877](https://doi.org/10.5281/zenodo.19005877) |
 | 3 | [Engine vs Steering Wheel](https://aitrustcommons.org/blog/2026/03/14/engine-vs-steering-wheel/) | [10.5281/zenodo.19025149](https://doi.org/10.5281/zenodo.19025149) |
 | 4 | [Stop Calling It Artificial](https://aitrustcommons.org/blog/2026/03/17/stop-calling-it-artificial/) | [10.5281/zenodo.19079578](https://doi.org/10.5281/zenodo.19079578) |
+| 5 | [Discovering Humanity Through AI](https://aitrustcommons.org/blog/2026/03/23/discovering-humanity-through-ai/) | [10.5281/zenodo.19187738](https://doi.org/10.5281/zenodo.19187738) |
 
 ### The Human Intelligence Partnership Charter
 
@@ -53,11 +54,12 @@ Four partnership patterns. Fifteen positions on the map. Drop "artificial." Star
 
 Charter DOI: [10.5281/zenodo.19078843](https://doi.org/10.5281/zenodo.19078843)
 
-### NIST Submission
+### NIST Submissions
 
 | Title | Channel | DOI |
 |-------|---------|-----|
 | Public Comment on AI Agent Governance (~5,000 words) | [regulations.gov](https://www.regulations.gov/comment/NIST-2025-0035-0352) | [10.5281/zenodo.18903117](https://doi.org/10.5281/zenodo.18903117) |
+| NCCoE: Intent Conveyance in AI Agent Authorization (~5,900 words) | [aitrustcommons.org](https://aitrustcommons.org/blog/2026/03/23/nccoe-ai-agent-identity-authorization-response/) | [10.5281/zenodo.19197399](https://doi.org/10.5281/zenodo.19197399) |
 
 ---
 

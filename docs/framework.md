@@ -19,9 +19,9 @@ AI Trust Commons is building the cross-provider governance layer that no single 
 
     ---
 
-    Authoritative crosswalk across OWASP Top 10 for Agentic Applications, NIST AI RMF, SOC 2, and EU AI Act. Implement one control, get credit across multiple audits.
+    Authoritative crosswalk across OWASP Top 10 for Agentic Applications, NIST AI RMF, and SOC 2. Implement one control, get credit across multiple audits.
 
-    The standards landscape for AI agents is fragmented. NIST publishes the AI Risk Management Framework. OWASP publishes the Top 10 for Agentic Applications. The EU AI Act imposes transparency obligations. SOC 2 auditors ask their own questions. AI Trust Commons maps these standards to each other so that a single technical control can satisfy requirements across multiple frameworks.
+    The standards landscape for AI agents is fragmented. NIST publishes the AI Risk Management Framework. OWASP publishes the Top 10 for Agentic Applications. SOC 2 auditors ask their own questions. AI Trust Commons maps these standards to each other so that a single technical control can satisfy requirements across multiple frameworks.
 
 -   :material-lightning-bolt:{ .lg .middle } __Policy-as-Code__
 

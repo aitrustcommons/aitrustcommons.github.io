@@ -38,7 +38,7 @@ A governance layer that sits between AI agents and the tools they access, enforc
 
     ---
 
-    Authoritative crosswalk across OWASP Top 10 for Agentic Applications, NIST AI RMF, SOC 2, and EU AI Act. Implement one control, get credit across multiple audits.
+    Authoritative crosswalk across OWASP Top 10 for Agentic Applications, NIST AI RMF, and SOC 2. Implement one control, get credit across multiple audits.
 
 -   :material-lightning-bolt: **Policy-as-Code**
 
