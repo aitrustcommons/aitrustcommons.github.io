@@ -61,12 +61,27 @@
   margin: 1rem 0;
 }
 
-/* --- Blog author avatar fix --- */
+/* --- Undo blog image styling on avatars --- */
 .md-author img {
+  border-radius: 50% !important;
+  margin: 0 !important;
+}
+
+/* --- Blog author avatar fix --- */
+.md-typeset .md-author img,
+.md-author--long img {
   width: 100% !important;
   height: 100% !important;
-  object-fit: cover;
-  object-position: center top;
+  object-fit: cover !important;
+  object-position: center 20% !important;
+  border-radius: 50% !important;
+}
+
+.md-typeset .md-author,
+.md-author--long .md-author {
+  overflow: hidden !important;
+  width: 2.4rem !important;
+  height: 2.4rem !important;
 }
 
 /* --- Footer --- */
