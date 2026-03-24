@@ -40,6 +40,6 @@ This builds on a prior submission to the NIST CAISI RFI on AI Agent Security ([D
 
 *This is a response to the NCCoE concept paper on AI agent identity and authorization, part of the From Instinct to Intent™ series. Related articles: "[Discovering Intent](../2026-03-08-discovering-intent/)," "[Languages Designed for Humans](../2026-03-13-languages-designed-for-humans/)," "[Everyone Is Arguing About the Engine](../2026-03-14-engine-vs-steering-wheel/)," "[Stop Calling It Artificial](../2026-03-17-stop-calling-it-artificial/)," and "[Discovering Humanity Through AI](../2026-03-23-discovering-humanity-through-ai/)" are available on [Medium](https://nikhilsinghal-ai-trust-commons.medium.com/) and [aitrustcommons.org](https://aitrustcommons.org/blog/).*
 
-*Also published on [Zenodo](https://doi.org/10.5281/zenodo.19197399) (DOI: 10.5281/zenodo.19197399)*
+*Also published on [Medium](https://nikhilsinghal-ai-trust-commons.medium.com/response-to-nccoe-concept-paper-intent-conveyance-as-the-missing-layer-in-ai-agent-identity-and-e8db45144de5) · [Zenodo](https://doi.org/10.5281/zenodo.19197399) (DOI: 10.5281/zenodo.19197399)*
 
 *Nikhil Singhal is the founder of AI Trust Commons and a technology executive with 25+ years of engineering leadership. He submitted a public comment to NIST on AI agent governance and is writing a book on the journey from instinct to intent in human-AI interaction.*
