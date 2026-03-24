@@ -19,7 +19,7 @@ AI Trust Commons engages directly with the standards bodies defining AI agent go
 
     Active participant in the AI Agent Standards Initiative. Public comment submitted to the CAISI RFI on AI Agent Security ([DOI: 10.5281/zenodo.18903117](https://doi.org/10.5281/zenodo.18903117)). Listening session request submitted.
 
-    NCCoE Identity and Authorization concept paper response submitted, proposing intent conveyance as the missing layer in AI agent authorization. **[DOI: 10.5281/zenodo.19197399](https://doi.org/10.5281/zenodo.19197399)**
+    NCCoE Identity and Authorization concept paper response submitted, proposing intent conveyance as the missing layer in AI agent authorization ([DOI: 10.5281/zenodo.19197399](https://doi.org/10.5281/zenodo.19197399)).
 
 -   :material-shield-bug:{ .lg .middle } __OWASP__
 
