@@ -4,24 +4,146 @@
   {% set og_title = page.meta.title if page and page.meta and page.meta.title else (page.title if page and page.title else config.site_name) %}
   {% set og_desc = page.meta.description if page and page.meta and page.meta.description else config.site_description %}
 
+  {# Blog post detection: mkdocs-material's blog plugin sets page.meta.date only on actual posts, not aggregation pages #}
+  {% set is_blog_post = page and page.meta and page.meta.date %}
+  {% set og_type = 'article' if is_blog_post else 'website' %}
+
+  {# OG image: per-post hero where the frontmatter sets one; otherwise the default site hero #}
+  {% set default_image = config.site_url ~ '/assets/images/hero-image.png' %}
+  {% if page and page.meta and page.meta.image %}
+    {% if page.meta.image.startswith('http') %}
+      {% set og_image = page.meta.image %}
+    {% else %}
+      {% set og_image = config.site_url ~ '/' ~ page.meta.image %}
+    {% endif %}
+  {% else %}
+    {% set og_image = default_image %}
+  {% endif %}
+
   <!-- Open Graph -->
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="{{ og_type }}">
   <meta property="og:site_name" content="{{ config.site_name }}">
   <meta property="og:title" content="{{ og_title }}">
   <meta property="og:description" content="{{ og_desc }}">
   {% if page and page.canonical_url %}
   <meta property="og:url" content="{{ page.canonical_url }}">
   {% endif %}
-  <meta property="og:image" content="https://aitrustcommons.org/assets/images/hero-image.png">
+  <meta property="og:image" content="{{ og_image }}">
+  <meta property="og:image:width" content="4002">
+  <meta property="og:image:height" content="1638">
 
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ og_title }}">
   <meta name="twitter:description" content="{{ og_desc }}">
-  <meta name="twitter:image" content="https://aitrustcommons.org/assets/images/hero-image.png">
+  <meta name="twitter:image" content="{{ og_image }}">
   <meta name="twitter:site" content="@nikhilsinghal">
 
   <!-- Additional SEO -->
   <meta name="author" content="Nikhil Singhal">
   <meta name="keywords" content="AI Trust Commons, AI governance, AI agent security, cross-provider compliance, NIST, OWASP, Intent Layer, From Instinct to Intent">
+
+  <!-- Structured Data: identity graph (Person + AI Trust Commons Organization + WebSite). Person uses the same @id as the canonical hub at nikhilsinghal.com so search engines treat both surfaces as one entity. -->
+  {% raw %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://nikhilsinghal.com/#person",
+        "name": "Nikhil Singhal",
+        "givenName": "Nikhil",
+        "familyName": "Singhal",
+        "jobTitle": "CTO | VP Engineering | AI Practitioner & Governance Strategist",
+        "url": "https://nikhilsinghal.com",
+        "image": "https://nikhilsinghal.com/img/nikhil-singhal-portrait-1200.jpg",
+        "email": "mailto:nikhil@omspark.com",
+        "telephone": "+1-206-226-2722",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Seattle",
+          "addressRegion": "WA",
+          "addressCountry": "US"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/nikhilsinghal/",
+          "https://github.com/nikhilsi",
+          "https://orcid.org/0009-0003-5449-6830",
+          "https://nikhilsinghal-ai-trust-commons.medium.com/",
+          "https://about.me/nikhil.singhal",
+          "https://x.com/nikhilsinghal",
+          "https://www.youtube.com/@nikhilsinghal",
+          "https://aitrustcommons.org",
+          "https://hipcharter.com",
+          "https://omspark.com"
+        ],
+        "knowsAbout": [
+          "Artificial Intelligence",
+          "AI Governance",
+          "Human-AI Interaction",
+          "Engineering Leadership",
+          "AI Trust Commons",
+          "Human Intelligence Partnership Charter",
+          "Intent Layer",
+          "Model Context Protocol",
+          "Large Language Models",
+          "AI Agents",
+          "AI Memory"
+        ],
+        "alumniOf": [
+          {"@type": "EducationalOrganization", "name": "Harvard University"},
+          {"@type": "EducationalOrganization", "name": "Bangalore University"}
+        ],
+        "worksFor": {
+          "@type": "Organization",
+          "name": "OmSpark LLC",
+          "url": "https://omspark.com"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://aitrustcommons.org/#organization",
+        "name": "AI Trust Commons",
+        "url": "https://aitrustcommons.org",
+        "founder": {"@id": "https://nikhilsinghal.com/#person"},
+        "sameAs": [
+          "https://github.com/aitrustcommons",
+          "https://nikhilsinghal-ai-trust-commons.medium.com/"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://aitrustcommons.org/#website",
+        "url": "https://aitrustcommons.org",
+        "name": "AI Trust Commons",
+        "publisher": {"@id": "https://aitrustcommons.org/#organization"},
+        "inLanguage": "en"
+      }
+    ]
+  }
+  </script>
+  {% endraw %}
+
+  {% if is_blog_post %}
+  {# Article schema for blog posts. Author + publisher reference the identity graph by @id. #}
+  {% set post_date = page.meta.date.created if page.meta.date.created is defined else page.meta.date %}
+  {% set post_updated = page.meta.date.updated if page.meta.date.updated is defined else post_date %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": {{ og_title | tojson }},
+    "description": {{ og_desc | tojson }},
+    "image": {{ og_image | tojson }},
+    "datePublished": "{{ post_date }}",
+    "dateModified": "{{ post_updated }}",
+    "author": {"@id": "https://nikhilsinghal.com/#person"},
+    "publisher": {"@id": "https://aitrustcommons.org/#organization"},
+    "mainEntityOfPage": {{ page.canonical_url | tojson }},
+    "inLanguage": "en"{% if page.meta.categories %},
+    "articleSection": {{ page.meta.categories | tojson }}{% endif %}
+  }
+  </script>
+  {% endif %}
 {% endblock %}

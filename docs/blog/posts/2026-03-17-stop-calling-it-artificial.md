@@ -5,7 +5,7 @@ categories:
   - From Instinct to Intent Series
 authors:
   - nikhil
-description: "As long as we call it Artificial Intelligence, we give ourselves permission to skip the communication infrastructure we would build for any human colleague. The HIP Charter starts with a different premise."
+description: "As long as we call it Artificial Intelligence, we give ourselves permission to skip the communication infrastructure we'd build for any human colleague."
 image: assets/images/hip-charter-article-hero-2026.jpeg
 ---
 

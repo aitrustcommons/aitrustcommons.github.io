@@ -19,6 +19,7 @@ The building taught me something. The hardest problem in AI is not what the mach
 
 25 years at Microsoft, T-Mobile, AT&T, Expedia Group, and Hitachi Consulting watching the distance grow between what leaders intended and what systems actually delivered. The governance layer between intent and execution was always the hardest part to get right. The same pattern is playing out in AI.
 
+[nikhilsinghal.com :material-web:](https://nikhilsinghal.com){ .md-button .md-button--primary }
 [LinkedIn :material-linkedin:](https://linkedin.com/in/nikhilsinghal){ .md-button }
 [GitHub :material-github:](https://github.com/nikhilsi){ .md-button }
 [ORCID](https://orcid.org/0009-0003-5449-6830){ .md-button }

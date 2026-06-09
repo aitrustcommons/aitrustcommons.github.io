@@ -5,7 +5,7 @@ categories:
   - Standards
 authors:
   - nikhil
-description: "Response to the NCCoE concept paper on AI agent identity and authorization. The paper proposes intent conveyance as the missing layer: agents authenticate and get authorized, but nothing in the identity stack evaluates whether their actions match the purpose they were authorized for."
+description: "Response to NCCoE on AI agent identity and authorization. Proposes intent conveyance as the missing layer: nothing in the identity stack evaluates purpose."
 ---
 
 # Response to NCCoE Concept Paper: Intent Conveyance as the Missing Layer in AI Agent Identity and Authorization

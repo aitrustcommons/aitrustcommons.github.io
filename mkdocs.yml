@@ -1,6 +1,6 @@
 site_name: AI Trust Commons
 site_url: https://aitrustcommons.org
-site_description: Open-source governance for AI agents that works across providers
+site_description: "Cross-provider governance for AI agents. Four pillars: standards mapping, policy-as-code, cross-provider audit trails, OWASP validation. By Nikhil Singhal."
 site_author: Nikhil Singhal
 
 repo_url: https://github.com/aitrustcommons/governance-framework
@@ -65,7 +65,13 @@ markdown_extensions:
       permalink: true
 
 extra:
+  analytics:
+    provider: google
+    property: G-RCJMWNTPNL
   social:
+    - icon: fontawesome/solid/globe
+      link: https://nikhilsinghal.com
+      name: nikhilsinghal.com
     - icon: fontawesome/brands/github
       link: https://github.com/aitrustcommons
     - icon: fontawesome/brands/linkedin

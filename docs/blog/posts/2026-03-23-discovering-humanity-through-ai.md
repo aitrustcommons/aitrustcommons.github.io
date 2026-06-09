@@ -5,7 +5,7 @@ categories:
   - From Instinct to Intent Series
 authors:
   - nikhil
-description: "Two apologies surfaced while writing a book with AI. Neither was planned. Neither was prompted. The absence of judgment did not create the insight. It created the space for the insight to surface."
+description: "Two apologies surfaced while writing a book with AI. Neither was planned. The absence of judgment did not create the insight. It created the space for it."
 image: assets/images/discovering-humanity-through-ai-2026.jpg
 ---
 

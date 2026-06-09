@@ -1,5 +1,5 @@
 ---
-title: "Governance Framework: Cross-Provider AI Agent Compliance"
+title: "Cross-Provider AI Agent Governance"
 description: "Four pillars of cross-provider AI governance: Standards Mapping, Policy-as-Code, Cross-Provider Audit Trails, and OWASP Validation. Open source, Apache 2.0."
 hide:
   - navigation

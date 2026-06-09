@@ -5,7 +5,7 @@ categories:
   - From Instinct to Intent Series
 authors:
   - nikhil
-description: "Every programming language ever created was designed for humans, not AI. We are making the most powerful code generation technology in history write in languages designed for human fingers and human eyes. That is the problem."
+description: "Programming languages were designed for humans, not AI. We make the most powerful code-generation technology write in languages built for human eyes."
 image: assets/images/evolution-of-programming-languages-ai-native-2026.png
 ---
 

@@ -5,7 +5,7 @@ categories:
   - From Instinct to Intent Series
 authors:
   - nikhil
-description: "$5 billion raised in 90 days on the question of which engine powers the future of AI. LeCun says world models. Altman says scale LLMs. Sutskever says we need new ideas. All focused on the engine. The question of how the human structurally tells any of these engines what to do has barely entered the conversation."
+description: "$5B raised in 90 days on which engine powers the future of AI. LeCun, Altman, Sutskever each disagree on the engine. Nobody is building the steering wheel."
 image: assets/images/engine-vs-steering-wheel-hero-2026.png
 ---
 
