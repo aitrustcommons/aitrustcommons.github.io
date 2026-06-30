@@ -1,6 +1,6 @@
 ---
 title: "About AI Trust Commons"
-description: "Founded by Nikhil Singhal. Builder who governs. The Human Intelligence Partnership Charter, the Intent Layer, and 25 years of engineering leadership."
+description: "Founded by Nikhil Singhal. Builder who governs. The Human Intelligence Partnership Charter, the Intent Layer, and three decades of engineering leadership."
 hide:
   - navigation
 ---
@@ -11,13 +11,13 @@ hide:
 
 ### Nikhil Singhal
 
-**CTO | VP Engineering | AI Practitioner & Governance Strategist**
+**Enterprise AI Architect & Builder | Hands-on CTO | Founder, AI Trust Commons**
 
-I design, architect, and ship production systems across every pattern of the [Human Intelligence Partnership Charter](https://hipcharter.com): the Foundation pattern, where AI is my daily build partner. The Tooling pattern, where the products I ship use AI to build but work without any AI dependency. The Pipeline pattern, where AI enriches data behind the scenes and users never see it. And the Integration pattern, where AI works alongside proprietary APIs and live data at runtime. These are not wrappers. They are architectures designed for two intelligences working together.
+I design, architect, and ship production AI systems. Agentic pipelines, retrieval and RAG, multi-agent orchestration. The work runs across the full [Human Intelligence Partnership Charter](https://hipcharter.com) map: Foundation, Tooling, Pipeline, and Integration patterns. These are not wrappers. They are architectures designed for two intelligences working together.
 
 The building taught me something. The hardest problem in AI is not what the machine can produce. It is the structural gap between what the human means and what the machine does. I call it the Intent Layer. That insight became the HIP Charter, AI Trust Commons, and the *From Instinct to Intent*™ series.
 
-25 years at Microsoft, T-Mobile, AT&T, Expedia Group, and Hitachi Consulting watching the distance grow between what leaders intended and what systems actually delivered. The governance layer between intent and execution was always the hardest part to get right. The same pattern is playing out in AI.
+Three decades at Microsoft, T-Mobile, AT&T, Expedia, and Hitachi Consulting. The governance layer between intent and execution was always the hardest part to get right. The same pattern is playing out in AI.
 
 [nikhilsinghal.com :material-web:](https://nikhilsinghal.com){ .md-button .md-button--primary }
 [LinkedIn :material-linkedin:](https://linkedin.com/in/nikhilsinghal){ .md-button }
