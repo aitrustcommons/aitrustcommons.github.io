@@ -268,6 +268,8 @@ And that starts, as it did for Neo, as it did for me on a Tuesday at 2 AM, not w
 
 ---
 
+*This is the first article in the From Instinct to Intent™ series. Later articles: "[We Are Making AI Write Code in Languages Designed for Humans](2026-03-13-languages-designed-for-humans.md)," "[Everyone Is Arguing About the Engine](2026-03-14-engine-vs-steering-wheel.md)," "[Stop Calling It Artificial](2026-03-17-stop-calling-it-artificial.md)," and "[Discovering Humanity Through AI](2026-03-23-discovering-humanity-through-ai.md)" are available on [Medium](https://nikhilsinghal-ai-trust-commons.medium.com/) and [aitrustcommons.org](https://aitrustcommons.org/blog/).*
+
 **Published simultaneously on:**
 
 [Medium](https://nikhilsinghal-ai-trust-commons.medium.com/discovering-intent-the-journey-that-starts-before-youre-ready-4a8a69fce594)
