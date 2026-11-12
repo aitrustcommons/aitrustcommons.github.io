@@ -37,5 +37,5 @@ AI Trust Commons engages directly with the standards bodies defining AI agent go
 
 | Submission | Channel | Reference |
 |-----------|---------|-----------|
-| NIST RFI on AI Agent Governance (~5,000 words) | [regulations.gov](https://www.regulations.gov/comment/NIST-2025-0035-0352) | [DOI: 10.5281/zenodo.18903117](https://doi.org/10.5281/zenodo.18903117) |
+| NIST RFI on AI Agent Governance (~5,000 words) | [regulations.gov](https://www.regulations.gov/comment/NIST-2025-0035-0424) | [DOI: 10.5281/zenodo.18903117](https://doi.org/10.5281/zenodo.18903117) |
 | NCCoE Identity and Authorization response (~5,900 words) | [AI-Identity@nist.gov](mailto:AI-Identity@nist.gov) | [DOI: 10.5281/zenodo.19197399](https://doi.org/10.5281/zenodo.19197399) |

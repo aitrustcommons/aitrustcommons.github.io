@@ -59,7 +59,7 @@ Charter DOI: [10.5281/zenodo.19078843](https://doi.org/10.5281/zenodo.19078843)
 
 | Title | Channel | DOI |
 |-------|---------|-----|
-| Public Comment on AI Agent Governance (~5,000 words) | [regulations.gov](https://www.regulations.gov/comment/NIST-2025-0035-0352) | [10.5281/zenodo.18903117](https://doi.org/10.5281/zenodo.18903117) |
+| Public Comment on AI Agent Governance (~5,000 words) | [regulations.gov](https://www.regulations.gov/comment/NIST-2025-0035-0424) | [10.5281/zenodo.18903117](https://doi.org/10.5281/zenodo.18903117) |
 | NCCoE: Intent Conveyance in AI Agent Authorization (~5,900 words) | [aitrustcommons.org](https://aitrustcommons.org/blog/2026/03/23/nccoe-ai-agent-identity-authorization-response/) | [10.5281/zenodo.19197399](https://doi.org/10.5281/zenodo.19197399) |
 
 ---
