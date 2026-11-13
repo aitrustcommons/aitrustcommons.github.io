@@ -35,6 +35,7 @@ theme:
     - toc.integrate
   icon:
     repo: fontawesome/brands/github
+  favicon: assets/brand/favicon-48.png
 
 plugins:
   - search

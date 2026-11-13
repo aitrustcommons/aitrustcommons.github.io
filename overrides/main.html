@@ -8,13 +8,14 @@
   {% set is_blog_post = page and page.meta and page.meta.date %}
   {% set og_type = 'article' if is_blog_post else 'website' %}
 
-  {# OG image: per-post hero where the frontmatter sets one; otherwise the default site hero #}
-  {% set default_image = config.site_url ~ '/assets/images/hero-image.png' %}
+  {# OG image: per-post hero where the frontmatter sets one; otherwise the logo card #}
+  {% set site_root = config.site_url.rstrip('/') %}
+  {% set default_image = site_root ~ '/assets/brand/aitc-social-card-1200x630.png' %}
   {% if page and page.meta and page.meta.image %}
     {% if page.meta.image.startswith('http') %}
       {% set og_image = page.meta.image %}
     {% else %}
-      {% set og_image = config.site_url ~ '/' ~ page.meta.image %}
+      {% set og_image = site_root ~ '/' ~ page.meta.image %}
     {% endif %}
   {% else %}
     {% set og_image = default_image %}
@@ -29,8 +30,11 @@
   <meta property="og:url" content="{{ page.canonical_url }}">
   {% endif %}
   <meta property="og:image" content="{{ og_image }}">
-  <meta property="og:image:width" content="4002">
-  <meta property="og:image:height" content="1638">
+  {% if og_image == default_image %}
+  {# Size is known only for the card; post heroes vary, so they carry none #}
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  {% endif %}
 
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
@@ -38,6 +42,9 @@
   <meta name="twitter:description" content="{{ og_desc }}">
   <meta name="twitter:image" content="{{ og_image }}">
   <meta name="twitter:site" content="@nikhilsinghal">
+
+  <!-- iPhone home-screen icon -->
+  <link rel="apple-touch-icon" href="{{ site_root }}/assets/brand/favicon-180.png">
 
   <!-- Additional SEO -->
   <meta name="author" content="Nikhil Singhal">
