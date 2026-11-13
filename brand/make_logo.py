@@ -87,6 +87,12 @@ card = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="
 subprocess.run(['rsvg-convert', '-w', '1200', '-h', '630', str(OUT / 'aitc-social-card.svg'),
                 '-o', str(OUT / 'aitc-social-card-1200x630.png')], check=True)
 
+# 4b. Site header logo: the mark on a white circle, so the blue ring stands out on the blue header bar
+badge = ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><title>AI Trust Commons</title>'
+         '<circle cx="50" cy="50" r="50" fill="#FFFFFF"/>'
+         f'<g transform="translate(50 50)">{mark_group(76)}</g></svg>')
+(OUT / 'aitc-header-logo.svg').write_text(badge)
+
 # 5. Check sheet: icons on light and dark tab bars, the avatars in a circle, and the card
 sheet = Image.new('RGB', (1240, 1150), '#FFFFFF')
 d = ImageDraw.Draw(sheet)

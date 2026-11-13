@@ -36,6 +36,7 @@ theme:
   icon:
     repo: fontawesome/brands/github
   favicon: assets/brand/favicon-48.png
+  logo: assets/brand/aitc-header-logo.svg
 
 plugins:
   - search

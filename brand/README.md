@@ -23,6 +23,7 @@ The gaps between rings and around the dot are cut-outs, not white paint. The mar
   - `favicon-16.png`, `favicon-32.png`, `favicon-48.png`: browser-tab icons. `favicon-180.png`: the iPhone home-screen icon.
   - `aitc-avatar-white-400.png` (LinkedIn) and `aitc-avatar-white-500.png` (GitHub): the mark on white with room for round crops.
   - `aitc-social-card-1200x630.png`: the default link-preview card.
+  - `aitc-header-logo.svg`: the logo in the site's blue header bar. The mark sits on a white circle so the blue ring stands out.
 
 ## How it was made
 
