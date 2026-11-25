@@ -23,12 +23,13 @@ export function displayDate(p: Post) {
 
 // Words divided by 230, rounded up. The same rule is used on the home page.
 export function readMinutes(text: string) {
-  const words = text.trim().split(/\s+/).filter(Boolean).length;
+  const visible = text.replace(/```[\s\S]*?```/g, ' ').replace(/\]\([^)]*\)/g, ']').replace(/https?:\/\/\S+/g, ' ');
+  const words = visible.trim().split(/\s+/).filter(Boolean).length;
   return Math.max(1, Math.ceil(words / 230));
 }
 
 export function extrasFor(p: Post) {
-  return (extras as Record<string, { part: number | null; medium: string | null; next: string | null }>)[p.data.slug];
+  return (extras as Record<string, { part: number | null; medium: string | null; next: string | null; heroAlt?: string }>)[p.data.slug];
 }
 
 export function isSeries(p: Post) {

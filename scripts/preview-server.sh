@@ -11,7 +11,8 @@ PIDFILE=$DIR/server.pid
 LOG=$DIR/server.log
 mkdir -p "$DIR"
 
-running() { [ -f "$PIDFILE" ] && kill -0 "$(cat "$PIDFILE")" 2>/dev/null; }
+# npx hands off to a child process, so the port is the true sign that the server is up.
+running() { lsof -ti tcp:$PORT >/dev/null 2>&1; }
 
 sweep() {
   local pids
@@ -21,7 +22,7 @@ sweep() {
 
 case "${1:-status}" in
   start)
-    if running; then echo "already running (pid $(cat "$PIDFILE")) at http://localhost:$PORT/"; exit 0; fi
+    if running; then echo "already running at http://localhost:$PORT/"; exit 0; fi
     sweep
     nohup npx astro preview --port $PORT >"$LOG" 2>&1 &
     echo $! >"$PIDFILE"
@@ -31,9 +32,9 @@ case "${1:-status}" in
     done
     echo "did not start; see $LOG"; exit 1 ;;
   stop)
-    running && kill "$(cat "$PIDFILE")" 2>/dev/null || true
+    [ -f "$PIDFILE" ] && kill "$(cat "$PIDFILE")" 2>/dev/null || true
     rm -f "$PIDFILE"; sweep; echo "stopped" ;;
   status)
-    running && echo "running at http://localhost:$PORT/ (pid $(cat "$PIDFILE"))" || echo "not running" ;;
+    running && echo "running at http://localhost:$PORT/ (pid $(lsof -ti tcp:$PORT | head -1))" || echo "not running" ;;
   *) echo "usage: $0 start|stop|status"; exit 1 ;;
 esac

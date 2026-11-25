@@ -2,7 +2,8 @@
   "discovering-intent": {
     "part": 1,
     "medium": "https://nikhilsinghal-ai-trust-commons.medium.com/discovering-intent-the-journey-that-starts-before-youre-ready-4a8a69fce594",
-    "next": "languages-designed-for-humans"
+    "next": "languages-designed-for-humans",
+    "heroAlt": "A terminal session: an AI coding agent reports its progress and waits for the next instruction"
   },
   "languages-designed-for-humans": {
     "part": 2,

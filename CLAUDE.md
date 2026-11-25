@@ -44,9 +44,24 @@ node scripts/verify.mjs --screens   # also save 390-wide phone screenshots to .p
 
 ## Going live
 
-Nikhil gives the go. Then:
-1. Merge into main.
-2. Switch the repo's Pages source to "GitHub Actions" (it was the gh-pages branch).
-3. Run verify against https://aitrustcommons.org.
+Only on Nikhil's go. Before it:
+- the five pieces have text in pieces.json
+- `reviewed` is true in home.json and in about.astro
 
-Rollback: point the Pages source back at the gh-pages branch, which still holds the old MkDocs site.
+The production build refuses to run without them.
+
+1. Save the current Pages settings: `gh api repos/aitrustcommons/aitrustcommons.github.io/pages > /tmp/pages-before.json` (cname aitrustcommons.org, https_enforced true).
+2. Check that `src/content/posts/*.md` still matches `main:docs/blog/posts/*.md` byte for byte.
+3. Merge `rebuild` into main.
+4. Switch the Pages source to "GitHub Actions" (Settings, Pages).
+5. Run "Deploy to GitHub Pages" on main from the Actions tab (`gh workflow run deploy.yml --ref main`). Switching the source doesn't start a run on its own.
+6. When it's green, read the Pages settings again. cname must be aitrustcommons.org and https_enforced true. If cname is blank: `gh api -X PUT repos/aitrustcommons/aitrustcommons.github.io/pages -f cname=aitrustcommons.org`.
+7. Run `node scripts/verify.mjs https://aitrustcommons.org`. Check a link preview, then resubmit the sitemap in Search Console.
+
+## Rollback (for the first month)
+
+1. Disable the deploy workflow first (`gh workflow disable deploy.yml`), so a push to main can't put the new site back.
+2. Switch the Pages source back to "Deploy from a branch: gh-pages, root". That branch still holds the old MkDocs site and nothing rebuilds it.
+3. If no "pages build and deployment" run starts, run `gh api -X POST repos/aitrustcommons/aitrustcommons.github.io/pages/builds`.
+4. Check cname and HTTPS as in step 6 above.
+5. Don't push to gh-pages during the month.

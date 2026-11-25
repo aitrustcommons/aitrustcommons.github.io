@@ -1,8 +1,12 @@
 {
-  "note": "Home page text that isn't on the poster. Draft by Claude, Nov 24, 2026, for Nikhil to edit.",
-  "version": { "number": 1, "label": "November 2026" },
+  "note": "Home page text that isn't on the poster. Draft for Nikhil to edit. Set reviewed to true once he has; the production build refuses to run until then.",
+  "reviewed": false,
+  "version": {
+    "number": 1,
+    "label": "November 2026"
+  },
   "overview": [
-    "The picture follows one piece of work through a company: a salesperson's AI agent drafting a contract for a customer. It starts with experts writing down their rules and ends with both companies signing. Then it loops back to the experts so the rules can get better.",
+    "The picture follows one piece of work from a company to its customer and back: a salesperson's AI agent drafting a contract. It starts with experts writing down their rules and ends with both companies signing. Then it loops back to the experts so the rules can get better.",
     "Every time the work crosses a line (between a person and an agent, between teams or between companies) it passes a gold gate. The gate checks the intent behind the work against the rules. Then it lets the work pass, pulls in a person to approve, or stops it. Each decision goes into the record with its reason.",
     "The nine steps below follow the numbers on the picture."
   ],
@@ -17,5 +21,6 @@
     "8": "Signed",
     "9": "Back to Codify"
   },
-  "govern_line": "Govern is the gates and the record, running through the other four."
+  "govern_line": "Govern is the gates and the record, running through the other four.",
+  "key_title": "Reading the gates"
 }

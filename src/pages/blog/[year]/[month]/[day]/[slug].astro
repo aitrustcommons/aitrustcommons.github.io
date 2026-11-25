@@ -16,10 +16,11 @@ export async function getStaticPaths() {
 }
 
 const { entry, all } = Astro.props;
-const { post, title, heroAlt, heroFile, rendered } = entry;
+const { post, title, heroFile, rendered } = entry;
 const { Content } = rendered;
 const fm = rendered.remarkPluginFrontmatter as { seriesLine?: string };
 const extra = extrasFor(post);
+const heroAlt = extra?.heroAlt ?? entry.heroAlt;
 const next = extra?.next ? all.find((e) => e.post.data.slug === extra.next) : undefined;
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/*', { eager: true });
 const hero = heroFile ? images[`/src/assets/images/${heroFile}`]?.default : undefined;
@@ -37,7 +38,7 @@ const usesMermaid = (post.body ?? '').includes('```mermaid');
   <article>
     <header class="post-head">
       <div class="kicker">
-        {fm.seriesLine ? <a href="/blog/category/from-instinct-to-intent-series/" style="color: inherit; text-decoration: none">{kicker}</a> : kicker}
+        {fm.seriesLine && extra?.part ? <a href="/blog/category/from-instinct-to-intent-series/" style="color: inherit; text-decoration: none">{kicker}</a> : kicker}
       </div>
       <h1>{title}</h1>
       <p class="lede">{post.data.description}</p>

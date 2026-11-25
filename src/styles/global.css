@@ -242,3 +242,39 @@ h1, h2, h3 { font-family: var(--display); color: var(--ink); text-wrap: balance;
   .step-lead, .piece-line { font-size: 18px; }
   .doc { padding-top: 40px; }
 }
+
+/* Breaker pass fixes (Nov 24) */
+.key-title { margin: 22px 0 10px; font-size: 18px; }
+.key { margin: 0 0 10px; padding-left: 22px; font-size: 16px; }
+.key li { margin-bottom: 4px; }
+.key-outcomes { list-style: none; padding-left: 0; display: flex; flex-direction: column; gap: 6px; }
+.key-outcomes li { display: flex; gap: 10px; align-items: flex-start; }
+.key-outcomes .outcome-icon { margin-top: 3px; flex: none; }
+.gate-pass-word { color: var(--pass); }
+.gate-approval-word { color: #c2410c; }
+.gate-block-word { color: #b91c1c; }
+.gate-feedback-word { color: var(--gold-text); }
+.key-extra { font-size: 16px; }
+.doc-section > .key-extra { margin: 0 0 8px; }
+
+/* Long links and code never push the page sideways */
+.prose { overflow-wrap: break-word; }
+.prose a { word-break: break-word; }
+
+/* Diagrams keep their natural size and scroll sideways on narrow screens */
+.prose pre.mermaid { overflow-x: auto; }
+.prose pre.mermaid svg { max-width: none !important; }
+
+/* Bigger tap targets in lists of links */
+.contents a { padding: 4px 0; }
+.site-footer nav a { padding: 10px 0; }
+.latest-links a { padding: 10px 0; }
+.post-row h2 a { display: inline-block; padding: 2px 0; }
+
+/* The contents list stops floating once it wraps above the text */
+@media (max-width: 900px) {
+  .contents { position: static; max-width: none; }
+}
+@media (max-width: 700px) {
+  .prose pre.mermaid svg { min-width: 600px; }
+}

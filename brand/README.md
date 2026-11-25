@@ -22,9 +22,10 @@ The gaps between rings and around the dot are cut-outs, not white paint. The mar
 - The site serves its copies from `docs/assets/brand/`:
   - `favicon-16.png`, `favicon-32.png`, `favicon-48.png`: browser-tab icons. `favicon-180.png`: the iPhone home-screen icon.
   - `aitc-avatar-white-400.png` (LinkedIn) and `aitc-avatar-white-500.png` (GitHub): the mark on white with room for round crops.
-  - `aitc-social-card-1200x630.png`: the default link-preview card.
+  - `aitc-card-2026-11.png`: the link-preview card since the Nov 2026 rebuild, made by `make_card.py` (served from `public/assets/brand/`).
+  - `aitc-social-card-1200x630.png`: the old card's address. Since the rebuild it holds the same image as the new card, so links shared before never show the old wording.
   - `aitc-header-logo.svg`: the logo in the site's blue header bar. The mark sits on a white circle so the blue ring stands out.
 
 ## How it was made
 
-ChatGPT drew the first rough versions from a short brief. Nikhil picked one. Claude redrew it as a vector and tuned the spacing and dot size so it reads at 16 pixels.
+Nikhil picked the design from rough sketches. `make_logo.py` redraws it as a vector, with the spacing and dot size tuned so it reads at 16 pixels.

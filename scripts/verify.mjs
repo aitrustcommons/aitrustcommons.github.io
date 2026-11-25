@@ -87,7 +87,10 @@ for (const p of PAGES) {
   const failed = need.filter(([, pass]) => !pass).map(([name]) => name);
   check(failed.length === 0, `${p}${failed.length ? ` missing: ${failed.join(', ')}` : ''}`);
 }
-check(!/Open-source governance|open-source initiative/i.test((await get('/')).html), 'no open-source claim on the home page');
+const claims = [];
+for (const p of [...PAGES.filter((x) => !POSTS.includes(x)), '/ai-governance-in-practice.md']) if (/open[- ]source/i.test((await get(p)).html)) claims.push(p);
+check(claims.length === 0, `no open-source claim on any page outside the unchanged posts${claims.length ? ' (found on ' + claims.join(', ') + ')' : ''}`);
+check(!/rel="canonical"/.test(missing.html) && /name="robots" content="noindex"/.test(missing.html), 'the 404 page is noindex with no canonical');
 
 // 3. The words are in the raw HTML, with no JavaScript run.
 console.log('\nText readable without JavaScript');
@@ -95,6 +98,16 @@ const home = decode((await get('/')).html);
 const steps = picture.steps.map((s) => s.parts.find((p) => p.lead));
 check(steps.every((l) => home.includes(l.head) && home.includes(l.body)), "each step's label and first sentence is on the home page");
 check(picture.pieces.every((p) => home.includes(p.line)), "each piece's one-liner is on the home page");
+check([...picture.gate_lines, ...picture.outcomes.map((o) => o.line), picture.record.body, picture.loop.body].every((t) => home.includes(t)),
+  "the poster's key (gate lines, outcomes, the record, on the loop) is on the home page");
+// Each step's parts appear in the poster's order.
+const firstText = (part) => part.lead ? part.body : part.kind === 'gate' ? part.crossing : part.kind === 'note' ? part.text : part.body;
+const outOfOrder = picture.steps.filter((s) => {
+  const from = home.indexOf(`id="step${s.number}"`);
+  const at = s.parts.map((part) => home.indexOf(firstText(part), from));
+  return at.some((v, i) => v < 0 || (i > 0 && v < at[i - 1]));
+}).map((s) => s.number);
+check(outOfOrder.length === 0, `every step keeps the poster's order${outOfOrder.length ? ' (not: ' + outOfOrder.join(', ') + ')' : ''}`);
 const empty = pieces.filter((p) => p.text.length === 0).map((p) => p.name);
 if (empty.length) console.log(`  note  no text yet for ${empty.join(', ')} (the production build refuses to run until it's in)`);
 for (const p of POSTS) {

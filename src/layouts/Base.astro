@@ -47,15 +47,14 @@ const ga = import.meta.env.PROD;
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{fullTitle}</title>
   <meta name="description" content={description}>
-  <link rel="canonical" href={canonical}>
-  {noindex && <meta name="robots" content="noindex">}
+  {noindex ? <meta name="robots" content="noindex"> : <link rel="canonical" href={canonical}>}
   <link rel="icon" type="image/png" sizes="48x48" href="/assets/brand/favicon-48.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16.png">
   <link rel="apple-touch-icon" href={`${site.url}/assets/brand/favicon-180.png`}>
   <link rel="alternate" type="application/rss+xml" title="From Instinct to Intent™" href="/rss.xml">
   <link rel="sitemap" href="/sitemap.xml">
-  <Font cssVariable="--font-inter" preload />
+  <Font cssVariable="--font-inter" />
   <Font cssVariable="--font-grotesk" />
 
   <meta property="og:type" content={post ? 'article' : 'website'}>
@@ -79,12 +78,18 @@ const ga = import.meta.env.PROD;
 
   {ga && (
     <>
-      <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${site.ga4}`}></script>
       <script is:inline define:vars={{ id: site.ga4 }}>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){ dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', id);
+        // Only the live site counts visits, so local reviews and checks don't.
+        if (location.hostname === 'aitrustcommons.org') {
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=' + id;
+          document.head.appendChild(s);
+          window.dataLayer = window.dataLayer || [];
+          window.gtag = function () { dataLayer.push(arguments); };
+          gtag('js', new Date());
+          gtag('config', id);
+        }
       </script>
     </>
   )}

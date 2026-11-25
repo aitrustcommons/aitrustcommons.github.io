@@ -2,10 +2,16 @@
 // About, draft 2: built from the canonical bio in the about-nikhil card
 // (agreed Nov 12, 2026). Nikhil edits it before launch.
 import Base from '../layouts/Base.astro';
+
+// Set to true once Nikhil has reviewed this page. The production build refuses to run until then.
+const reviewed = false;
+if (import.meta.env.PROD && process.env.REQUIRE_PIECE_TEXT === '1' && !reviewed) {
+  throw new Error('About page: waiting for Nikhil\'s review. Set reviewed to true in src/pages/about.astro.');
+}
 ---
 <Base
   title="About AI Trust Commons"
-  description="Founded by Nikhil Singhal. Builder who governs. The Human Intelligence Partnership Charter, the Intent Layer, and three decades of engineering leadership."
+  description="Nikhil Singhal, AI-first builder and architect, going deep on human intent and AI. AI Trust Commons is where he does that work in the open."
   current="about"
 >
   <div class="page">

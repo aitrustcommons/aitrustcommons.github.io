@@ -1,7 +1,7 @@
 ---
 // One of the nine steps. The words are the poster's, word for word, from
-// picture.json. The lead card gives the label and the first sentence; the
-// gates and other cards follow in the poster's order.
+// picture.json. The lead card gives the label at the top. Every part, the
+// lead sentence included, then follows in the poster's order.
 import { Image } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
 import GateBox from './GateBox.astro';
@@ -9,7 +9,6 @@ import GateBox from './GateBox.astro';
 interface Props { step: any; images: { src: ImageMetadata; alt: string; full: string }[] }
 const { step, images } = Astro.props;
 const lead = step.parts.find((p: any) => p.lead);
-const rest = step.parts.filter((p: any) => !p.lead);
 ---
 <section id={`step${step.number}`} class={`step tone-${step.color}`} aria-labelledby={`step${step.number}-label`}>
   <h3 id={`step${step.number}-label`} class="step-label">
@@ -17,8 +16,8 @@ const rest = step.parts.filter((p: any) => !p.lead);
     <span class="visually-hidden">Step {step.number}: </span>
     <span>{lead.head}</span>
   </h3>
-  <p class="step-lead">{lead.body}</p>
-  {rest.map((part: any) => {
+  {step.parts.map((part: any) => {
+    if (part.lead) return <p class="step-lead">{part.body}</p>;
     if (part.kind === 'gate') return <GateBox gate={part} />;
     if (part.kind === 'note') return <p class="step-note">{part.text}</p>;
     return (
