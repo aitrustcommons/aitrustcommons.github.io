@@ -20,6 +20,7 @@ export function GET() {
   const lines = [
     `# ${picture.title}`, '', site.description, '',
     `Version ${home.version.number} · ${home.version.label} · ${site.url}/`, '',
+    'By Nikhil Singhal · https://aitrustcommons.org/about/', '',
     `## ${home.intro.title}`, '',
     ...home.intro.sections.flatMap((x) => [`### ${x.heading}`, '', ...x.paragraphs.flatMap((p) => [p, ''])]),
     '## Overview', '', ...home.overview.flatMap((p) => [p, '']),
@@ -39,6 +40,6 @@ export function GET() {
     ...picture.outcomes.map((o) => `- ${o.word}: ${o.line}`), '',
     `## ${picture.record.head}`, '', picture.record.body, '',
     `## ${picture.loop.head}`, '', picture.loop.body, '',
-    'Writing licensed CC BY 4.0. AI Trust Commons.', '');
+    'Written by Nikhil Singhal. Licensed CC BY 4.0. AI Trust Commons.', '');
   return new Response(lines.join('\n'), { headers: { 'Content-Type': 'text/markdown; charset=utf-8' } });
 }

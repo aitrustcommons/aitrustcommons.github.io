@@ -56,7 +56,7 @@ const homeLd = {
   url: `${SITE}/`,
   mainEntityOfPage: `${SITE}/`,
   headline: picture.title,
-  description: site.description,
+  description: home.meta_description,
   image: `${SITE}/picture/ai-governance-in-practice.png`,
   datePublished: `${home.published}T00:00:00Z`,
   dateModified: `${home.updated}T00:00:00Z`,
@@ -68,12 +68,13 @@ const homeLd = {
   license: 'https://creativecommons.org/licenses/by/4.0/',
 };
 ---
-<Base title={picture.title} description={site.description} current="home" ld={homeLd} markdownAlt="/ai-governance-in-practice.md">
+<Base title={`${picture.title}: how to govern AI agents`} description={home.meta_description} current="home" ld={homeLd} markdownAlt="/ai-governance-in-practice.md">
   <div class="wrap">
     <section class="home-top" aria-labelledby="page-title">
       <h1 id="page-title" class="page-title">{picture.title}</h1>
       <p class="lede">{site.description}</p>
       <div class="meta">
+        <a class="author" href="/about/">Nikhil Singhal</a>
         <span>Version {home.version.number}</span>
         <span>{home.version.label}</span>
         <span>{minutes} min read</span>

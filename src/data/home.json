@@ -5,6 +5,7 @@
     "number": 1,
     "label": "November 2026"
   },
+  "meta_description": "How to govern AI agents, by Nikhil Singhal. One sales contract moves across teams and companies in nine steps. Each handoff passes through a policy gate.",
   "overview": [
     "The picture follows one contract from a company to its customer and back. A salesperson's AI agent drafts it. Experts write their judgment down as policy in step 1. Both companies sign in step 8. In step 9 a question goes back to the experts.",
     "Each time the work changes hands, AI governance kicks in. The picture shows it as a policy gate. The gate reads the intent: who asked for the work, why and on whose authority. Then it enforces the policies that apply. The work goes through, escalates to a person in the loop, or stops. Each decision goes into the audit trail with its reason.",
@@ -30,7 +31,7 @@
         "heading": "Why it's needed",
         "paragraphs": [
           "AI agents now do work for people. They draft contracts and pull customer records. An agent follows the instructions in front of it. It usually can't tell who set a policy or why.",
-          "AI governance keeps that work inside a company's policies. It also lets the company show later who decided what and why. Today a lot of it is a policy on paper and an audit after the fact."
+          "AI governance is how a company keeps that work inside its policies. It also lets the company show later who decided what and why. Today a lot of it is a policy on paper and an audit after the fact."
         ]
       },
       {

@@ -17,7 +17,7 @@ export default defineConfig({
   // small page with a meta refresh for each one.
   redirects: {
     '/framework': '/',
-    '/standards': '/',
+    '/standards': '/about/',
     '/blog/archive/2026': '/blog/',
     '/blog/category/standards': '/blog/',
   },

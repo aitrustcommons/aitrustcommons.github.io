@@ -39,7 +39,7 @@ const POSTS = [
   '/blog/2026/03/23/nccoe-ai-agent-identity-authorization-response/',
 ];
 const SERIES = '/blog/category/from-instinct-to-intent-series/';
-const FORWARDS = { '/framework/': '/', '/standards/': '/', '/blog/archive/2026/': '/blog/', '/blog/category/standards/': '/blog/' };
+const FORWARDS = { '/framework/': '/', '/standards/': '/about/', '/blog/archive/2026/': '/blog/', '/blog/category/standards/': '/blog/' };
 const PAGES = ['/', '/about/', '/blog/', SERIES, '/picture/', ...POSTS];
 
 console.log(`Checking ${BASE}\n\nOld addresses`);
