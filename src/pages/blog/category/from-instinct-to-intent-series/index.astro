@@ -3,13 +3,32 @@
 // this series index as evidence. Never redirect it.
 import Base from '../../../../layouts/Base.astro';
 import PostRow from '../../../../components/PostRow.astro';
-import { allPosts, isSeries } from '../../../../lib/posts';
+import { allPosts, isSeries, postPath, extrasFor } from '../../../../lib/posts';
 const posts = (await allPosts()).filter(({ post }) => isSeries(post));
+const SITE = 'https://aitrustcommons.org';
+const seriesLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CreativeWorkSeries',
+  '@id': `${SITE}/blog/category/from-instinct-to-intent-series/#series`,
+  name: 'From Instinct to Intent™',
+  url: `${SITE}/blog/category/from-instinct-to-intent-series/`,
+  author: { '@type': 'Person', '@id': 'https://nikhilsinghal.com/#person', name: 'Nikhil Singhal' },
+  publisher: { '@id': `${SITE}/#organization` },
+  startDate: '2026-03-08',
+  hasPart: [...posts].reverse().map(({ post, title }) => ({
+    '@type': 'BlogPosting',
+    '@id': `${SITE}${postPath(post)}#article`,
+    url: `${SITE}${postPath(post)}`,
+    headline: title,
+    position: extrasFor(post)?.part,
+  })),
+};
 ---
 <Base
   title="From Instinct to Intent Series"
   description="The From Instinct to Intent™ series by Nikhil Singhal: five articles on the structural gap between human intent and machine execution."
   current="blog"
+  ld={seriesLd}
 >
   <div class="wrap">
     <div class="list-head">

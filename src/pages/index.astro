@@ -46,8 +46,29 @@ const words = [
 const minutes = readMinutes(words);
 
 const latest = (await allPosts()).slice(0, 3);
+
+// The home page as an article by Nikhil Singhal, for search and AI readers.
+const SITE = site.url;
+const homeLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  '@id': `${SITE}/#article`,
+  url: `${SITE}/`,
+  mainEntityOfPage: `${SITE}/`,
+  headline: picture.title,
+  description: site.description,
+  image: `${SITE}/picture/ai-governance-in-practice.png`,
+  datePublished: `${home.published}T00:00:00Z`,
+  dateModified: `${home.updated}T00:00:00Z`,
+  author: { '@type': 'Person', '@id': 'https://nikhilsinghal.com/#person', name: 'Nikhil Singhal', url: 'https://nikhilsinghal.com' },
+  publisher: { '@id': `${SITE}/#organization` },
+  isPartOf: { '@id': `${SITE}/#website` },
+  about: [{ '@type': 'Thing', name: 'AI governance' }, { '@type': 'Thing', name: 'AI agents' }],
+  inLanguage: 'en',
+  license: 'https://creativecommons.org/licenses/by/4.0/',
+};
 ---
-<Base title={picture.title} description={site.description} current="home">
+<Base title={picture.title} description={site.description} current="home" ld={homeLd} markdownAlt="/ai-governance-in-practice.md">
   <div class="wrap">
     <section class="home-top" aria-labelledby="page-title">
       <h1 id="page-title" class="page-title">{picture.title}</h1>

@@ -26,11 +26,17 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/
 const hero = heroFile ? images[`/src/assets/images/${heroFile}`]?.default : undefined;
 const kicker = fm.seriesLine ? `${fm.seriesLine}${extra?.part ? ` · PART ${extra.part}` : ''}` : post.data.categories.join(', ').toUpperCase();
 const usesMermaid = (post.body ?? '').includes('```mermaid');
+// Share cards crop thin banners badly, so a banner hero uses the site card instead.
+const banner = hero && hero.width / hero.height > 2.5;
+const SERIES_ID = 'https://aitrustcommons.org/blog/category/from-instinct-to-intent-series/#series';
+const postExtra = extra?.part ? { isPartOf: { '@id': SERIES_ID }, position: extra.part } : undefined;
 ---
 <Base
   title={title}
   description={post.data.description}
-  image={post.data.image ? `/${post.data.image}` : undefined}
+  image={post.data.image && !banner ? `/${post.data.image}` : undefined}
+  imageAlt={post.data.image && !banner && heroAlt ? heroAlt : undefined}
+  postExtra={postExtra}
   post={{ published: isoDay(post), categories: post.data.categories }}
   current="blog"
   mermaid={usesMermaid}
@@ -43,7 +49,7 @@ const usesMermaid = (post.body ?? '').includes('```mermaid');
       <h1>{title}</h1>
       <p class="lede">{post.data.description}</p>
       <div class="meta">
-        <span class="author">Nikhil Singhal</span>
+        <a class="author" href="/about/">Nikhil Singhal</a>
         <time datetime={isoDay(post)}>{displayDate(post)}</time>
         <span>{readMinutes(post.body ?? '')} min read</span>
         {extra?.medium && <a href={extra.medium}>Also on Medium</a>}

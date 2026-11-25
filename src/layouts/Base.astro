@@ -16,27 +16,38 @@ interface Props {
   current?: 'home' | 'blog' | 'about';
   mermaid?: boolean;
   noindex?: boolean;
+  imageAlt?: string;        // alt text for the share image
+  ld?: object;              // one more JSON-LD block for this page
+  postExtra?: object;       // extra BlogPosting fields, such as the series link
+  markdownAlt?: string;     // a plain-text copy of this page, for AI readers
 }
 
-const { title, description = site.description, image, post, current, mermaid = false, noindex = false } = Astro.props;
+const { title, description = site.description, image, post, current, mermaid = false, noindex = false,
+  imageAlt, ld, postExtra, markdownAlt } = Astro.props;
 const canonical = new URL(Astro.url.pathname, site.url).href;
 const ogImage = image ? new URL(image, site.url).href : new URL(site.defaultCard, site.url).href;
 const isCard = !image;
+const shareAlt = imageAlt ?? 'AI Trust Commons: AI governance in practice';
+const license = 'https://creativecommons.org/licenses/by/4.0/';
 const fullTitle = `${title} - ${site.name}`;
 
 const blogPosting = post && {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
+  '@id': `${canonical}#article`,
+  url: canonical,
   headline: title,
   description,
   image: ogImage,
-  datePublished: post.published,
-  dateModified: post.published,
-  author: { '@id': 'https://nikhilsinghal.com/#person' },
+  datePublished: `${post.published}T00:00:00Z`,
+  dateModified: `${post.published}T00:00:00Z`,
+  author: { '@type': 'Person', '@id': 'https://nikhilsinghal.com/#person', name: 'Nikhil Singhal', url: 'https://nikhilsinghal.com' },
   publisher: { '@id': 'https://aitrustcommons.org/#organization' },
   mainEntityOfPage: canonical,
   inLanguage: 'en',
+  license,
   ...(post.categories.length ? { articleSection: post.categories } : {}),
+  ...(postExtra ?? {}),
 };
 const ga = import.meta.env.PROD;
 ---
@@ -54,6 +65,8 @@ const ga = import.meta.env.PROD;
   <link rel="apple-touch-icon" href={`${site.url}/assets/brand/favicon-180.png`}>
   <link rel="alternate" type="application/rss+xml" title="From Instinct to Intent™" href="/rss.xml">
   <link rel="sitemap" href="/sitemap.xml">
+  <link rel="license" href={license}>
+  {markdownAlt && <link rel="alternate" type="text/markdown" href={markdownAlt}>}
   <Font cssVariable="--font-inter" />
   <Font cssVariable="--font-grotesk" />
 
@@ -63,18 +76,21 @@ const ga = import.meta.env.PROD;
   <meta property="og:description" content={description}>
   <meta property="og:url" content={canonical}>
   <meta property="og:image" content={ogImage}>
+  <meta property="og:image:alt" content={shareAlt}>
   {isCard && <meta property="og:image:width" content="1200">}
   {isCard && <meta property="og:image:height" content="630">}
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content={title}>
   <meta name="twitter:description" content={description}>
   <meta name="twitter:image" content={ogImage}>
+  <meta name="twitter:image:alt" content={shareAlt}>
+  {post && <meta property="article:published_time" content={`${post.published}T00:00:00Z`}>}
   <meta name="twitter:site" content={site.twitter}>
   <meta name="author" content={site.author}>
-  <meta name="keywords" content={site.keywords}>
 
   <script type="application/ld+json" set:html={JSON.stringify(graph)} />
   {blogPosting && <script type="application/ld+json" set:html={JSON.stringify(blogPosting)} />}
+  {ld && <script type="application/ld+json" set:html={JSON.stringify(ld)} />}
 
   {ga && (
     <>

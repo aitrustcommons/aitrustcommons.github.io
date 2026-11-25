@@ -1,9 +1,11 @@
 ---
 // The full poster, to zoom into or download.
+import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
+import overview from '../assets/picture/overview.png';
 import picture from '../data/picture.json';
 ---
-<Base title="The full picture" description="The full AI governance in practice picture. Open it as an image or a PDF." current="home">
+<Base title="AI governance in practice: the full picture" description="The full AI governance in practice picture. Open it as an image or a PDF." current="home">
   <div class="wrap picture-page">
     <h1 class="page-title">{picture.title}</h1>
     <p class="meta">
@@ -13,7 +15,7 @@ import picture from '../data/picture.json';
       <a href="/">Back to the home page</a>
     </p>
     <a href="/picture/ai-governance-in-practice.png">
-      <img src="/picture/ai-governance-in-practice.png" width="5240" height="3033" alt="The full picture of AI governance in practice. Nine numbered steps follow a sales contract from the experts' rules to both signatures. A gold gate marks every handoff. The last step goes back to the experts." />
+      <Image src={overview} alt="The full picture of AI governance in practice. Nine numbered steps follow a sales contract from the experts' rules to both signatures. A gold gate marks every handoff. The last step goes back to the experts." widths={[720, 1200, 2400]} sizes="(max-width: 1200px) 100vw, 1136px" loading="eager" />
     </a>
   </div>
 </Base>

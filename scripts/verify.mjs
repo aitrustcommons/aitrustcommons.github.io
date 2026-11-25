@@ -80,7 +80,7 @@ for (const p of PAGES) {
   if (POSTS.includes(p)) {
     const post = lds.find((d) => d['@type'] === 'BlogPosting');
     const day = p.split('/').slice(2, 5).join('-');
-    need.push(['BlogPosting with the right date', post?.datePublished === day]);
+    need.push(['BlogPosting with the right date', !!post?.datePublished?.startsWith(day)]);
     const old = meta(golden(p), 'property', 'og:title');
     need.push([`og:title and headline as on the old site`, !!old && meta(html, 'property', 'og:title') === old && post?.headline === old]);
   }
@@ -128,6 +128,12 @@ check(rss.status === 200 && (rss.html.match(/<item>/g) || []).length === 6, 'RSS
 const sitemap = await get('/sitemap.xml');
 const locs = [...sitemap.html.matchAll(/<loc>https:\/\/aitrustcommons\.org([^<]+)<\/loc>/g)].map((m) => m[1]);
 check(PAGES.every((p) => locs.includes(p)), 'the sitemap lists every page');
+check((sitemap.html.match(/<lastmod>\d{4}-\d{2}-\d{2}<\/lastmod>/g) || []).length === locs.length, 'every sitemap entry has a lastmod date');
+const ldTypes = (html) => [...html.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/gs)].flatMap((m) => { const d = JSON.parse(m[1]); return d['@graph'] ? d['@graph'].map((n) => n['@type']) : [d['@type']]; });
+check(ldTypes((await get('/')).html).includes('Article'), 'the home page is marked up as an Article by Nikhil Singhal');
+check(ldTypes((await get('/about/')).html).includes('ProfilePage'), 'About is marked up as a ProfilePage');
+check(ldTypes((await get(SERIES)).html).includes('CreativeWorkSeries'), 'the series page is marked up as a CreativeWorkSeries');
+check((rss.html.match(/<dc:creator>Nikhil Singhal<\/dc:creator>/g) || []).length === 6, 'every RSS item names Nikhil Singhal');
 check(!Object.keys(FORWARDS).some((p) => locs.includes(p)), 'the sitemap lists no forwarded address');
 const robots = await get('/robots.txt');
 check(robots.html.includes('Sitemap: https://aitrustcommons.org/sitemap.xml'), 'robots.txt points to the sitemap');

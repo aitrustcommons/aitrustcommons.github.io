@@ -1,0 +1,20 @@
+# AI Trust Commons
+
+> Nikhil Singhal's AI governance work. The home page shows AI governance in practice. Nine steps follow one sales contract as AI agents hand work between teams and companies. A gate checks the rules at each handoff.
+
+Writing is licensed CC BY 4.0. Credit Nikhil Singhal.
+
+## Main pages
+
+- [AI governance in practice, plain text](https://aitrustcommons.org/ai-governance-in-practice.md): the home page's words without the design
+- [About Nikhil Singhal](https://aitrustcommons.org/about/): who he is and his published work
+- [From Instinct to Intent™](https://aitrustcommons.org/blog/): his posts on the gap between human intent and machine execution
+
+## Posts
+
+- [Discovering Intent: The Journey That Starts Before You're Ready](https://aitrustcommons.org/blog/2026/03/08/discovering-intent/)
+- [We Are Making AI Write Code in Languages Designed for Humans. That Is the Problem.](https://aitrustcommons.org/blog/2026/03/13/languages-designed-for-humans/)
+- [Everyone Is Arguing About the Engine. Who Is Building the Steering Wheel?](https://aitrustcommons.org/blog/2026/03/14/engine-vs-steering-wheel/)
+- [Stop Calling It Artificial. Start Building WITH Intelligence.](https://aitrustcommons.org/blog/2026/03/17/stop-calling-it-artificial/)
+- [Discovering Humanity Through AI](https://aitrustcommons.org/blog/2026/03/23/discovering-humanity-through-ai/)
+- [Response to NCCoE Concept Paper: Intent Conveyance as the Missing Layer in AI Agent Identity and Authorization](https://aitrustcommons.org/blog/2026/03/23/nccoe-ai-agent-identity-authorization-response/)

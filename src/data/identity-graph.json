@@ -69,9 +69,10 @@
         "@id": "https://nikhilsinghal.com/#person"
       },
       "sameAs": [
-        "https://github.com/aitrustcommons",
-        "https://nikhilsinghal-ai-trust-commons.medium.com/"
-      ]
+        "https://github.com/aitrustcommons"
+      ],
+      "logo": "https://aitrustcommons.org/assets/brand/aitc-avatar-white-500.png",
+      "description": "AI Trust Commons is where Nikhil Singhal does his AI governance work in the open."
     },
     {
       "@type": "WebSite",

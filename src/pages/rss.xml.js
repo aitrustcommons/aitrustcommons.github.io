@@ -14,7 +14,9 @@ export async function GET(context) {
       pubDate: post.data.date,
       link: postPath(post),
       categories: post.data.categories,
+      customData: '<dc:creator>Nikhil Singhal</dc:creator>',
     })),
-    customData: '<language>en</language>',
+    xmlns: { dc: 'http://purl.org/dc/elements/1.1/', atom: 'http://www.w3.org/2005/Atom' },
+    customData: '<language>en</language><atom:link href="https://aitrustcommons.org/rss.xml" rel="self" type="application/rss+xml"/>',
   });
 }

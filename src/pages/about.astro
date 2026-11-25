@@ -8,8 +8,19 @@ const reviewed = true; // Nikhil approved this page on Nov 25, 2026
 if (import.meta.env.PROD && process.env.REQUIRE_PIECE_TEXT === '1' && !reviewed) {
   throw new Error('About page: waiting for Nikhil\'s review. Set reviewed to true in src/pages/about.astro.');
 }
+const profileLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfilePage',
+  '@id': 'https://aitrustcommons.org/about/#profilepage',
+  url: 'https://aitrustcommons.org/about/',
+  name: 'About Nikhil Singhal',
+  dateModified: '2026-11-25T00:00:00Z',
+  mainEntity: { '@type': 'Person', '@id': 'https://nikhilsinghal.com/#person', name: 'Nikhil Singhal' },
+  isPartOf: { '@id': 'https://aitrustcommons.org/#website' },
+};
 ---
 <Base
+  ld={profileLd}
   title="About AI Trust Commons"
   description="Nikhil Singhal is an AI-first builder and architect going deep on human intent and AI. AI Trust Commons is where he does that work in the open."
   current="about"

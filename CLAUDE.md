@@ -56,7 +56,19 @@ The production build refuses to run without them.
 4. Switch the Pages source to "GitHub Actions" (Settings, Pages).
 5. Run "Deploy to GitHub Pages" on main from the Actions tab (`gh workflow run deploy.yml --ref main`). Switching the source doesn't start a run on its own.
 6. When it's green, read the Pages settings again. cname must be aitrustcommons.org and https_enforced true. If cname is blank: `gh api -X PUT repos/aitrustcommons/aitrustcommons.github.io/pages -f cname=aitrustcommons.org`.
-7. Run `node scripts/verify.mjs https://aitrustcommons.org`. Check a link preview, then resubmit the sitemap in Search Console.
+7. Run `node scripts/verify.mjs https://aitrustcommons.org`. Check a link preview in LinkedIn's Post Inspector.
+
+Before the merge, set the launch date in `src/data/home.json` (`published`, `updated` and the version label).
+
+Search engines and AI answer engines, right after launch (from the Nov 25 SEO and AEO audit):
+1. Google Search Console: Settings, Search generative AI must show Included.
+2. Resubmit https://aitrustcommons.org/sitemap.xml. Remove the old `sitemap.xml.gz` if it's listed.
+3. URL Inspection, Request indexing, one at a time: `/`, `/about/`, `/blog/`, the series page and all six posts. Also the four old addresses (`/framework/`, `/standards/`, `/blog/archive/2026/`, `/blog/category/standards/`), so Google drops their old open-source and "four pillars" text.
+4. Bing Webmaster Tools: My Sites, Import from Google Search Console.
+5. IndexNow (Bing, Copilot and others): the key file is `public/b0cc8fd4e6f2245a684cb4d1a5cf30c4.txt`. Submit every sitemap URL plus the four old addresses:
+   `KEY=b0cc8fd4e6f2245a684cb4d1a5cf30c4; URLS=$(curl -s https://aitrustcommons.org/sitemap.xml | grep -o 'https://aitrustcommons.org[^<]*' | sed 's/.*/"&"/' | paste -sd, -); OLD='"https://aitrustcommons.org/framework/","https://aitrustcommons.org/standards/","https://aitrustcommons.org/blog/archive/2026/","https://aitrustcommons.org/blog/category/standards/"'; curl -s -o /dev/null -w "%{http_code}\n" -X POST https://api.indexnow.org/indexnow -H "Content-Type: application/json; charset=utf-8" -d "{\"host\":\"aitrustcommons.org\",\"key\":\"$KEY\",\"keyLocation\":\"https://aitrustcommons.org/$KEY.txt\",\"urlList\":[$URLS,$OLD]}"`
+   A 200 or 202 means it worked.
+6. A week later: Search Console, Pages, "Why pages aren't indexed". A post marked "Duplicate, Google chose different canonical" is probably losing to its Medium copy.
 
 ## Rollback (for the first month)
 
