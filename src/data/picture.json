@@ -1,6 +1,6 @@
 {
   "title": "AI governance in practice",
-  "poster_sha1": "0a9b16ce497891f026eb5267e539eb045b51d2c6",
+  "poster_sha1": "c7c16dab23290976513cb017ef78d61069c794fc",
   "steps": [
     {
       "number": 1,
@@ -9,7 +9,7 @@
         {
           "kind": "card",
           "head": "CODIFY · CenterStart",
-          "body": "Experts turn their judgment into rules: discount limits, standard clauses.",
+          "body": "Experts write their judgment down as policy. Sales sets discount limits. Legal sets standard clauses.",
           "lead": true
         },
         {
@@ -19,15 +19,15 @@
           "word": "PASS",
           "crossing": "experts to Company A's space",
           "text": [
-            "New rules and rule changes both cross here. Each keeps who set it, who approved it and why."
+            "New and changed policies cross here."
           ],
           "fields": [],
-          "recorded": "each rule and its history."
+          "recorded": "each policy, who set it, who approved it and why."
         },
         {
           "kind": "space",
           "head": "COMPANY A'S SPACE · CenterSquare",
-          "body": "The shared context: the experts' rules, pricing, past contracts, the customer's history. Team spaces inside it add their own."
+          "body": "The shared context: the experts' policies, pricing, past contracts and the customer's history. Sales and Legal each add their team's policies."
         }
       ]
     },
@@ -40,12 +40,12 @@
           "tier": "S",
           "outcome": "pass",
           "word": "PASS",
-          "crossing": "shared context to the salesperson",
+          "crossing": "space to salesperson",
           "text": [
-            "The salesperson's CenterEye may read Company A's space for Sales."
+            "The salesperson's CenterEye may read the Sales part of Company A's space."
           ],
           "fields": [],
-          "recorded": "the sources it may use."
+          "recorded": "the access granted."
         },
         {
           "kind": "card",
@@ -60,7 +60,7 @@
           "word": "PASS",
           "crossing": "person to agent",
           "text": [
-            "The gate reads and checks the ask's intent:"
+            "The gate reads the ask's intent:"
           ],
           "fields": [
             {
@@ -77,7 +77,7 @@
             },
             {
               "label": "On whose authority",
-              "value": "the salesperson's own Sales limits."
+              "value": "the salesperson's approval limit."
             },
             {
               "label": "Until when",
@@ -95,7 +95,7 @@
         {
           "kind": "card",
           "head": "THE DRAFT",
-          "body": "The salesperson's agent drafts the contract from both kinds of context.",
+          "body": "The salesperson's agent drafts the contract from the company's context and the salesperson's own.",
           "lead": true
         }
       ]
@@ -107,7 +107,7 @@
         {
           "kind": "card",
           "head": "CONDUIT · CenterLoop",
-          "body": "The agent asks Salesforce for the customer's details through a standard AI connector (MCP).",
+          "body": "The agent asks Salesforce for the customer's details through an MCP connector.",
           "lead": true
         },
         {
@@ -120,7 +120,7 @@
             "Sales may read its own accounts in Salesforce."
           ],
           "fields": [],
-          "recorded": "the Salesforce read."
+          "recorded": "the data Salesforce returned."
         },
         {
           "kind": "outside",
@@ -136,7 +136,7 @@
         {
           "kind": "card",
           "head": "SCOPE · CenterSquare",
-          "body": "Sales limits flow down to the salesperson: 25% for the team and 10% for them. The draft asks for 20%.",
+          "body": "Approval limits flow down: 25% for the Sales team and 10% for the salesperson. The draft asks for 20%.",
           "lead": true
         },
         {
@@ -146,14 +146,14 @@
           "word": "NEEDS APPROVAL",
           "crossing": "agent to person",
           "text": [
-            "20% is over the salesperson's 10% and under the team's 25%. The sales manager is pulled in the loop and approves."
+            "20% is over the salesperson's 10% and under the team's 25%. The request escalates to the sales manager."
           ],
           "fields": [],
           "recorded": "the manager approved 20%. Why: a multi-year deal."
         },
         {
           "kind": "person",
-          "head": "SALES MANAGER · IN THE LOOP",
+          "head": "SALES MANAGER",
           "body": "Sees the request and its reason. Approves 20%."
         }
       ]
@@ -169,7 +169,7 @@
           "word": "PASS",
           "crossing": "Sales team to Legal team",
           "text": [
-            "Sales may hand Legal a draft for review. No contract leaves Company A without Legal's review."
+            "Sales may hand Legal a draft. Policy: no contract leaves Company A without Legal's review."
           ],
           "fields": [],
           "recorded": "draft sent to Legal."
@@ -177,7 +177,7 @@
         {
           "kind": "card",
           "head": "CONDUIT · CenterLoop",
-          "body": "Legal's agent reviews the draft and finds a non-standard clause. After the lawyer's approval it sends the draft out.",
+          "body": "Legal's agent reviews the draft and flags a non-standard clause. After the lawyer's approval it sends the draft out.",
           "lead": true
         },
         {
@@ -187,14 +187,14 @@
           "word": "NEEDS APPROVAL",
           "crossing": "agent to person",
           "text": [
-            "A non-standard liability clause. The lawyer is pulled in the loop and approves."
+            "A non-standard liability clause escalates to the lawyer."
           ],
           "fields": [],
           "recorded": "the lawyer approved the clause."
         },
         {
           "kind": "person",
-          "head": "LAWYER · IN THE LOOP",
+          "head": "LAWYER",
           "body": "Sees the clause and its reason. Approves it."
         },
         {
@@ -204,10 +204,10 @@
           "word": "BLOCKED",
           "crossing": "at Company A's edge",
           "text": [
-            "Legal's agent also attached the customer's full Salesforce record. It can't leave Company A. Only the attachment stops here."
+            "Legal's agent also attached the customer's full Salesforce record. Policy: customer records can't leave Company A. The draft goes on without it."
           ],
           "fields": [],
-          "recorded": "attachment blocked; the contract went on."
+          "recorded": "the blocked attachment."
         },
         {
           "kind": "gate",
@@ -219,7 +219,7 @@
             "The draft may go to the customer's Legal team for review."
           ],
           "fields": [],
-          "recorded": "draft sent to the customer without the attachment."
+          "recorded": "draft sent to the customer."
         }
       ]
     },
@@ -230,7 +230,7 @@
         {
           "kind": "card",
           "head": "CONDUIT · CenterLoop",
-          "body": "The customer's Legal team reviews under its own rules and sends back changes.",
+          "body": "The customer's Legal team reviews under its own policies and sends back changes.",
           "lead": true
         },
         {
@@ -244,7 +244,7 @@
           "word": "PASS",
           "crossing": "back into Company A",
           "text": [
-            "The customer's changes are inside Company A's rules."
+            "The customer's changes comply with Company A's policies."
           ],
           "fields": [],
           "recorded": "the accepted changes."
@@ -272,17 +272,17 @@
           "tier": "M",
           "outcome": "feedback",
           "word": "FEEDS BACK",
-          "crossing": "record to the experts",
+          "crossing": "audit trail to experts",
           "text": [
             "Over the quarter the same 20% exception was approved three times. The Sales expert gets one question: should multi-year deals get 20% without approval?"
           ],
           "fields": [],
-          "recorded": "the question sent to the Sales expert."
+          "recorded": "the question."
         },
         {
           "kind": "card",
           "head": "BACK TO CODIFY · CenterStart",
-          "body": "The Sales expert updates the rule: multi-year deals up to 20%. The head of Sales approves the change.",
+          "body": "The Sales expert updates the discount policy: multi-year deals can go to 20% without approval. The head of Sales approves the change.",
           "lead": true
         }
       ]
@@ -291,29 +291,29 @@
   "pieces": [
     {
       "name": "CODIFY · CenterStart",
-      "line": "Turn an expert's judgment into rules an AI can follow."
+      "line": "Turn an expert's judgment into policy an AI can follow."
     },
     {
       "name": "CONTEXT · CenterEye",
-      "line": "Every AI works from the same intent."
+      "line": "Each AI a person uses gets the same context: the company's and their own."
     },
     {
       "name": "SCOPE · CenterSquare",
-      "line": "Company rules flow down to the right projects, teams and people."
+      "line": "Company policies flow down to the groups and people they apply to."
     },
     {
       "name": "CONDUIT · CenterLoop",
-      "line": "Agents and people pass work and messages across systems and back, with humans in the loop or on the loop."
+      "line": "Carries work and messages between people, agents and outside systems."
     },
     {
       "name": "GOVERN · CenterGovern",
-      "line": "Every step enforced, traced, auditable and accountable, with the intent behind each decision kept as it changes."
+      "line": "Every step is enforced, traced, auditable and accountable. The intent behind each decision is kept as it changes."
     }
   ],
   "gate_lines": [
-    "Every line between lanes, teams or companies marks a handoff.",
-    "Each crossing has a gold gate. It reads the intent: who, what, why, on whose authority, until when.",
-    "It checks the rules in scope and records the decision with its reason."
+    "Each handoff between people, agents, teams or companies passes through a policy gate.",
+    "The gate reads the intent: who, what, why, on whose authority, until when.",
+    "It enforces the policies in scope and records the decision with its reason."
   ],
   "outcomes": [
     {
@@ -324,7 +324,7 @@
     {
       "outcome": "approval",
       "word": "NEEDS APPROVAL",
-      "line": "a person is pulled in the loop to decide."
+      "line": "a person in the loop decides."
     },
     {
       "outcome": "block",
@@ -338,12 +338,12 @@
     }
   ],
   "record": {
-    "head": "THE RECORD · CenterGovern",
-    "body": "Every gate on the way is kept: what was asked, the rules, the outcome, who decided and why. Later changes of intent are kept too."
+    "head": "THE AUDIT TRAIL · CenterGovern",
+    "body": "Each gate writes here: what was asked, the policies applied, the outcome, who decided and why. Later changes to the intent are kept too."
   },
   "loop": {
     "kind": "loop",
     "head": "ON THE LOOP",
-    "body": "Everyone else watches the record and gets alerts. Any of them can step in."
+    "body": "Others on the deal monitor the audit trail and get alerts. Any of them can step in."
   }
 }
