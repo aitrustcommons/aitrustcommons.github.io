@@ -1,0 +1,25 @@
+---
+// The gate outcome marks from the poster's key: pass, needs approval,
+// blocked, feeds back. Decorative: the outcome word is always text next to it.
+interface Props { outcome: 'pass' | 'approval' | 'block' | 'feedback'; size?: number }
+const { outcome, size = 22 } = Astro.props;
+---
+<svg aria-hidden="true" width={size} height={size} viewBox="0 0 22 22" class="outcome-icon">
+  {outcome === 'pass' && (<>
+    <circle cx="11" cy="11" r="11" fill="#16a34a"></circle>
+    <path d="M6.5 11.5l3 3 6-6.5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path>
+  </>)}
+  {outcome === 'approval' && (<>
+    <path d="M11 1.5 21 20H1z" fill="#ea580c"></path>
+    <path d="M11 8v5.5M11 16.3v.2" stroke="#fff" stroke-width="2.4" stroke-linecap="round"></path>
+  </>)}
+  {outcome === 'block' && (<>
+    <path d="M6.6 1h8.8L21 6.6v8.8L15.4 21H6.6L1 15.4V6.6z" fill="#dc2626"></path>
+    <path d="M7.5 7.5l7 7M14.5 7.5l-7 7" stroke="#fff" stroke-width="2.4" stroke-linecap="round"></path>
+  </>)}
+  {outcome === 'feedback' && (<>
+    <circle cx="11" cy="11" r="11" fill="#ca8a04"></circle>
+    <path d="M15.5 9.5A5 5 0 1 0 16 13" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"></path>
+    <path d="M16.5 5.8v4h-4" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path>
+  </>)}
+</svg>

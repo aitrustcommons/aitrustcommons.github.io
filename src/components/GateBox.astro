@@ -1,0 +1,22 @@
+---
+import OutcomeIcon from './OutcomeIcon.astro';
+interface Field { label: string; value: string }
+interface Props {
+  gate: { outcome: 'pass' | 'approval' | 'block' | 'feedback'; word: string; crossing: string; text: string[]; fields: Field[]; recorded: string };
+}
+const { gate } = Astro.props;
+const word = { PASS: 'Pass', 'NEEDS APPROVAL': 'Needs approval', BLOCKED: 'Blocked', 'FEEDS BACK': 'Feeds back' }[gate.word] ?? gate.word;
+---
+<div class={`gate gate-${gate.outcome}`}>
+  <OutcomeIcon outcome={gate.outcome} />
+  <div class="gate-body">
+    <p class="gate-head"><b class="gate-word">{word}</b><span class="gate-crossing"> · {gate.crossing}</span></p>
+    {gate.text.map((t) => <p>{t}</p>)}
+    {gate.fields.length > 0 && (
+      <dl class="gate-fields">
+        {gate.fields.map((f) => <div><dt>{f.label}:</dt> <dd>{f.value}</dd></div>)}
+      </dl>
+    )}
+    <p><b class="gate-label">Recorded:</b> {gate.recorded}</p>
+  </div>
+</div>

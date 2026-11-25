@@ -3,3 +3,4 @@ dist/
 .astro/
 site/
 .DS_Store
+.preview/

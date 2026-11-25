@@ -1,0 +1,19 @@
+---
+// The full poster, to zoom into or download.
+import Base from '../layouts/Base.astro';
+import picture from '../data/picture.json';
+---
+<Base title="The full picture" description="AI governance in practice: the full picture, as an image and as a PDF." current="home">
+  <div class="wrap picture-page">
+    <h1 class="page-title">{picture.title}</h1>
+    <p class="meta">
+      <a href="/picture/ai-governance-in-practice.png">Full-size image</a>
+      <a href="/ai-governance-in-practice.pdf">Poster (PDF)</a>
+      <a href="/ai-governance-in-practice.md">Plain text</a>
+      <a href="/">Back to the home page</a>
+    </p>
+    <a href="/picture/ai-governance-in-practice.png">
+      <img src="/picture/ai-governance-in-practice.png" width="5240" height="3033" alt="The full picture: AI governance in practice. Nine numbered steps follow a sales contract from the experts' rules to both signatures, through gold gates at every handoff, and back to the experts." />
+    </a>
+  </div>
+</Base>

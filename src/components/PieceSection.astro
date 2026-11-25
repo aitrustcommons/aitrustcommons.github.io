@@ -1,0 +1,19 @@
+---
+// One of the five pieces: its name and product, the one-liner from the
+// poster's key, then Nikhil's text, open (no folded sections).
+interface Props { piece: { key: string; color: string; name: string; product: string; text: string[] }; line: string }
+const { piece, line } = Astro.props;
+const missing = piece.text.length === 0;
+---
+<section id={`piece-${piece.key}`} class={`piece tone-${piece.color}`}>
+  <h3 class="piece-label">
+    {piece.color === 'gold'
+      ? <span class="piece-gate" aria-hidden="true"><span></span></span>
+      : <span class="piece-mark" aria-hidden="true"></span>}
+    <span>{piece.name} · {piece.product}</span>
+  </h3>
+  <p class="piece-line">{line}</p>
+  {missing
+    ? <p class="placeholder">[Text for {piece.name.toLowerCase()} from Nikhil]</p>
+    : piece.text.map((t) => <p>{t}</p>)}
+</section>

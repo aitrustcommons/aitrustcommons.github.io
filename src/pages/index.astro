@@ -1,6 +1,124 @@
 ---
+// Home: "AI governance in practice". Mockups SiteB (top), SiteBottom
+// (below step 9) and SitePhone. Build spec section 6.
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
 import Base from '../layouts/Base.astro';
+import StepSection from '../components/StepSection.astro';
+import PieceSection from '../components/PieceSection.astro';
+import picture from '../data/picture.json';
+import pieces from '../data/pieces.json';
+import home from '../data/home.json';
+import site from '../data/site.json';
+import { allPosts, postPath, displayDate, isoDay, readMinutes } from '../lib/posts';
+
+// The production build on GitHub refuses to publish placeholder text.
+const missingPieces = pieces.pieces.filter((p) => p.text.length === 0).map((p) => p.name);
+if (import.meta.env.PROD && process.env.REQUIRE_PIECE_TEXT === '1' && missingPieces.length) {
+  throw new Error(`Home page: no text yet for ${missingPieces.join(', ')}. Add it to src/data/pieces.json.`);
+}
+
+const files = import.meta.glob<{ default: ImageMetadata }>('/src/assets/picture/*.png', { eager: true });
+const img = (name: string) => files[`/src/assets/picture/${name}.png`].default;
+const stepImages = (n: number, head: string) =>
+  (n === 6 ? ['step6', 'step6b'] : [`step${n}`]).map((name) => ({
+    src: img(name),
+    alt: `Close-up of step ${n} on the picture: ${head}`,
+    full: img(name).src,
+  }));
+
+const lineFor = (p: { name: string; product: string }) =>
+  picture.pieces.find((x) => x.name === `${p.name} · ${p.product}`)?.line ?? '';
+
+// Read time for the page, with the same rule as the posts.
+const words = [
+  ...home.overview,
+  ...picture.steps.flatMap((s) => s.parts.flatMap((p: any) => [p.head, p.body, p.crossing, ...(p.text ?? []), ...(p.fields ?? []).map((f: any) => `${f.label} ${f.value}`), p.recorded])),
+  ...pieces.pieces.flatMap((p) => [lineFor(p), ...p.text]),
+].filter(Boolean).join(' ');
+const minutes = readMinutes(words);
+
+const latest = (await allPosts()).slice(0, 3);
 ---
-<Base title="AI governance in practice" current="home">
-  <div class="page"><h1 class="page-title">AI governance in practice</h1><p class="lede">[Home page under construction on the rebuild branch]</p></div>
+<Base title={picture.title} description={site.description} current="home">
+  <div class="wrap">
+    <section class="home-top" aria-labelledby="page-title">
+      <h1 id="page-title" class="page-title">{picture.title}</h1>
+      <p class="lede">{site.description}</p>
+      <div class="meta">
+        <span>Version {home.version.number}</span>
+        <span>{home.version.label}</span>
+        <span>{minutes} min read</span>
+        <a href="/ai-governance-in-practice.pdf">Poster (PDF)</a>
+        <a href="/ai-governance-in-practice.md">Plain text</a>
+      </div>
+    </section>
+
+    <figure class="overview">
+      <a href="/picture/">
+        <Image src={img('overview')} alt="The whole picture: AI governance in practice, from the experts' rules to the signed contract and back" widths={[720, 1200, 2400]} sizes="(max-width: 1200px) 100vw, 1136px" loading="eager" />
+      </a>
+      <figcaption><a href="/picture/">Open the full picture</a></figcaption>
+    </figure>
+
+    <div class="doc">
+      <nav class="contents" aria-label="Contents">
+        <p class="kicker">CONTENTS</p>
+        <a href="#overview">Overview</a>
+        {picture.steps.map((s) => (
+          <a href={`#step${s.number}`} class="contents-step">
+            <span class={`contents-num tone-${s.color}`}>{s.number}</span>
+            <span>{home.contents[String(s.number) as keyof typeof home.contents]}</span>
+          </a>
+        ))}
+        <a href="#pieces">The five pieces</a>
+        <a href="#versions">Versions</a>
+      </nav>
+
+      <div class="doc-main">
+        <section id="overview" class="doc-section">
+          <h2>Overview</h2>
+          {home.overview.map((p) => <p>{p}</p>)}
+        </section>
+
+        <section class="doc-section steps" aria-label="The nine steps">
+          {picture.steps.map((step) => {
+            const lead = step.parts.find((p: any) => p.lead) as any;
+            return <StepSection step={step} images={stepImages(step.number, lead.head)} />;
+          })}
+        </section>
+
+        <section id="pieces" class="doc-section">
+          <h2>The five pieces</h2>
+          <p>{home.govern_line}</p>
+          <div class="pieces">
+            {pieces.pieces.map((p) => <PieceSection piece={p} line={lineFor(p)} />)}
+          </div>
+        </section>
+
+        <section id="versions" class="doc-section">
+          <h2>Versions</h2>
+          <ul class="versions">
+            <li>Version {home.version.number} · {home.version.label} · First published.</li>
+          </ul>
+          <p><a href="/ai-governance-in-practice.pdf">Poster (PDF)</a></p>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <section class="latest" aria-labelledby="latest-title">
+    <div class="wrap">
+      <h2 id="latest-title">Latest writing</h2>
+      <div class="latest-grid">
+        {latest.map(({ post, title }) => (
+          <article>
+            <time datetime={isoDay(post)}>{displayDate(post)}</time>
+            <h3><a href={postPath(post)}>{title}</a></h3>
+          </article>
+        ))}
+      </div>
+      <p class="latest-links"><a href="/blog/">All posts</a><a href="/about/">About</a></p>
+    </div>
+  </section>
 </Base>

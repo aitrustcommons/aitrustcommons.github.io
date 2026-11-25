@@ -1,0 +1,10 @@
+{
+  "note": "The five pieces. name and line are word for word from the poster's key (picture.json). text is new writing from Nikhil. While a text is empty, local builds show a placeholder and the production build on GitHub refuses to run.",
+  "pieces": [
+    { "key": "codify",  "color": "pink",   "name": "CODIFY",  "product": "CenterStart",  "text": [] },
+    { "key": "context", "color": "cyan",   "name": "CONTEXT", "product": "CenterEye",    "text": [] },
+    { "key": "scope",   "color": "violet", "name": "SCOPE",   "product": "CenterSquare", "text": [] },
+    { "key": "conduit", "color": "blue",   "name": "CONDUIT", "product": "CenterLoop",   "text": [] },
+    { "key": "govern",  "color": "gold",   "name": "GOVERN",  "product": "CenterGovern", "text": [] }
+  ]
+}

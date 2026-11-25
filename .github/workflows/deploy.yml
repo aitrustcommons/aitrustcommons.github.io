@@ -1,0 +1,36 @@
+# Publishes the site to GitHub Pages on every push to main, with Astro's
+# official action (docs.astro.build/en/guides/deploy/github/). Pushing any
+# other branch publishes nothing. Build spec section 9.
+name: Deploy to GitHub Pages
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v7
+      - name: Install, build and upload the site
+        uses: withastro/action@v6
+        env:
+          # The home page refuses to build while any of the five pieces has no text.
+          REQUIRE_PIECE_TEXT: '1'
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
