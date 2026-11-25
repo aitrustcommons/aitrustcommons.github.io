@@ -1,10 +1,61 @@
 {
-  "note": "The five pieces. name and line are word for word from the poster's key (picture.json). text is new writing from Nikhil. While a text is empty, local builds show a placeholder and the production build on GitHub refuses to run.",
+  "note": "The five pieces. name and line are word for word from the poster's key (picture.json). text is new writing from Nikhil. While a text is empty, local builds show a placeholder and the production build on GitHub refuses to run. Status lines are as of Nov 23, 2026 (task #626); check them again before launch.",
   "pieces": [
-    { "key": "codify",  "color": "pink",   "name": "CODIFY",  "product": "CenterStart",  "text": [] },
-    { "key": "context", "color": "cyan",   "name": "CONTEXT", "product": "CenterEye",    "text": [] },
-    { "key": "scope",   "color": "violet", "name": "SCOPE",   "product": "CenterSquare", "text": [] },
-    { "key": "conduit", "color": "blue",   "name": "CONDUIT", "product": "CenterLoop",   "text": [] },
-    { "key": "govern",  "color": "gold",   "name": "GOVERN",  "product": "CenterGovern", "text": [] }
+    {
+      "key": "codify",
+      "color": "pink",
+      "name": "CODIFY",
+      "product": "CenterStart",
+      "text": [
+        "Most of what makes a company work lives in a few people's heads: how big a discount is fine, which contract clause is never OK. Codify turns that judgment into rules an AI can follow. Every rule keeps the name of the expert who set it.",
+        "The trick is in how you ask. Give the expert what's already known. Ask about one thing at a time. Start with the question that settles the most. In step 9 the Sales expert gets a single question after the same exception came up three times.",
+        "CenterStart is running today."
+      ]
+    },
+    {
+      "key": "context",
+      "color": "cyan",
+      "name": "CONTEXT",
+      "product": "CenterEye",
+      "text": [
+        "A new AI chat starts from nothing. You explain your work again. The AI guesses the rest.",
+        "Context keeps one record for each client or project. The rules that apply are written down in it. Every AI you use reads from it. The next chat starts where the last one stopped. In step 2 the salesperson asks their agent for a contract. Their CenterEye hands over the company's rules along with their own accounts and history.",
+        "CenterEye has been live since November 11, 2026."
+      ]
+    },
+    {
+      "key": "scope",
+      "color": "violet",
+      "name": "SCOPE",
+      "product": "CenterSquare",
+      "text": [
+        "A rule that fits the Sales team may not fit Legal. A manager's limit isn't a new hire's limit. Scope sends each rule to the right place: the whole company, one team or one person.",
+        "In step 5 the team can approve up to 25% and the salesperson up to 10%. The draft asks for 20%. That's more than the salesperson can approve. The sales manager is pulled in to decide.",
+        "CenterSquare's spaces are live today. More of it is still in design."
+      ]
+    },
+    {
+      "key": "conduit",
+      "color": "blue",
+      "name": "CONDUIT",
+      "product": "CenterLoop",
+      "text": [
+        "Most work crosses lines. It goes from a person to an agent, from Sales to Legal, and from your company to a customer and back. Conduit carries the work across those lines and brings the answers back. A person is pulled in when a decision needs them. Everyone else can watch and step in.",
+        "In step 6 the draft goes from Sales to Legal. In step 7 it goes out to the customer's lawyers and comes back with their changes.",
+        "CenterLoop is running today. Its first part went live on November 19, 2026: messages between AI chats."
+      ]
+    },
+    {
+      "key": "govern",
+      "color": "gold",
+      "name": "GOVERN",
+      "product": "CenterGovern",
+      "text": [
+        "Govern runs through the other four. It's the gold gate at every crossing in the picture. It's also the record those gates keep.",
+        "Each gate checks the work against the rules and the intent behind it. Then it lets the work pass, asks a person or stops it. Every decision is written down with its reason. Months later you can still see what happened and why.",
+        "The record is also how the rules get better. In step 9 it spots the same exception three times and asks the expert about it.",
+        "CenterGovern isn't built yet."
+      ]
+    }
   ]
 }
