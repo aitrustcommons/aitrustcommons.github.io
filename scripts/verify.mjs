@@ -98,6 +98,9 @@ const home = decode((await get('/')).html);
 const steps = picture.steps.map((s) => s.parts.find((p) => p.lead));
 check(steps.every((l) => home.includes(l.head) && home.includes(l.body)), "each step's label and first sentence is on the home page");
 check(picture.pieces.every((p) => home.includes(p.line)), "each piece's one-liner is on the home page");
+const homeData = JSON.parse(fs.readFileSync('src/data/home.json', 'utf8'));
+check(homeData.intro.sections.every((x) => home.includes(x.heading) && x.paragraphs.every((p) => home.includes(p))), 'the "Why AI governance" introduction is on the home page');
+check(home.indexOf('id="why"') > 0 && home.indexOf('id="why"') < home.indexOf('class="overview"'), 'the introduction sits above the picture');
 check([...picture.gate_lines, ...picture.outcomes.map((o) => o.line), picture.record.body, picture.loop.body].every((t) => home.includes(t)),
   "the poster's key (gate lines, outcomes, the record, on the loop) is on the home page");
 // Each step's parts appear in the poster's order.

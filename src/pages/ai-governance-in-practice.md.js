@@ -20,6 +20,9 @@ export function GET() {
   const lines = [
     `# ${picture.title}`, '', site.description, '',
     `Version ${home.version.number}, ${home.version.label}. ${site.url}/`, '',
+    `## ${home.intro.title}`, '',
+    ...home.intro.sections.flatMap((x) => [`### ${x.heading}`, '', ...x.paragraphs.flatMap((p) => [p, ''])]),
+    home.intro.closing, '',
     '## Overview', '', ...home.overview.flatMap((p) => [p, '']),
   ];
   for (const s of picture.steps) {

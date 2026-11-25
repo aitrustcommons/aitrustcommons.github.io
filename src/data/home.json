@@ -22,5 +22,30 @@
     "9": "Back to Codify"
   },
   "govern_line": "Govern is the gates and the record, running through the other four.",
-  "key_title": "Reading the gates"
+  "key_title": "Reading the gates",
+  "intro": {
+    "title": "Why AI governance",
+    "sections": [
+      {
+        "heading": "Why we need it",
+        "paragraphs": [
+          "AI agents now do work for people. They draft contracts, pull customer records and send documents to other companies. An agent does what it's asked. It can't tell who set a rule, why the rule exists or where it stops.",
+          "AI governance keeps that work inside a company's rules. It also lets the company show later who decided what and why. Today most of it lives in policies and audits that come after the fact."
+        ]
+      },
+      {
+        "heading": "Where it has to happen",
+        "paragraphs": [
+          "Inside a team, an agent works under that team's rules and limits. A salesperson's agent can offer only what that salesperson may offer. The harder part is the crossing. Work moves from a person to an agent, from Sales to Legal, from one company to another. At each crossing the rules change and the intent can get lost. My view is that governance has to happen right there: each time work changes hands."
+        ]
+      },
+      {
+        "heading": "How the Center pieces help",
+        "paragraphs": [
+          "I'm building five pieces that work together. They let a company hand work to AI agents and still know the work stayed inside its rules. CenterStart turns an expert's judgment into rules. CenterEye gives every AI you use the same context. CenterSquare makes sure each rule reaches the right team or person. Work moves between people, agents and companies through CenterLoop. Running through all four is CenterGovern: the gates and the record. Some of it runs today. CenterGovern isn't built yet."
+        ]
+      }
+    ],
+    "closing": "The picture shows what that looks like, step by step."
+  }
 }

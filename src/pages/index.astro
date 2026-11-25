@@ -34,6 +34,7 @@ const lineFor = (p: { name: string; product: string }) =>
 
 // Read time for the page, with the same rule as the posts.
 const words = [
+  ...home.intro.sections.flatMap((x) => x.paragraphs),
   ...home.overview,
   ...picture.gate_lines,
   ...picture.outcomes.map((o) => `${o.word} ${o.line}`),
@@ -60,6 +61,17 @@ const latest = (await allPosts()).slice(0, 3);
       </div>
     </section>
 
+    <section id="why" class="intro" aria-labelledby="why-title">
+      <h2 id="why-title">{home.intro.title}</h2>
+      {home.intro.sections.map((sec) => (
+        <div class="intro-part">
+          <h3>{sec.heading}</h3>
+          {sec.paragraphs.map((t) => <p>{t}</p>)}
+        </div>
+      ))}
+      <p class="intro-closing">{home.intro.closing}</p>
+    </section>
+
     <figure class="overview">
       <a href="/picture/">
         <Image src={img('overview')} alt="The whole picture: AI governance in practice, from the experts' rules to the signed contract and back" widths={[720, 1200, 2400]} sizes="(max-width: 1200px) 100vw, 1136px" loading="eager" />
@@ -70,6 +82,7 @@ const latest = (await allPosts()).slice(0, 3);
     <div class="doc">
       <nav class="contents" aria-label="Contents">
         <p class="kicker">CONTENTS</p>
+        <a href="#why">Why AI governance</a>
         <a href="#overview">Overview</a>
         {picture.steps.map((s) => (
           <a href={`#step${s.number}`} class="contents-step">
