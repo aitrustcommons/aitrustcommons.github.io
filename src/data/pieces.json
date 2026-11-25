@@ -7,7 +7,7 @@
       "name": "CODIFY",
       "product": "CenterStart",
       "text": [
-        "A lot of what a company knows sits in a few people's heads. One expert knows how big a discount is fine. Another knows which contract clause is never OK. CenterStart writes that know-how down as rules an AI can follow. Every rule keeps the name of the expert who set it.",
+        "A lot of what a company knows sits in a few people's heads. One expert knows how big a discount is fine. Another knows which contract clause is never OK. CenterStart writes that know-how down as policy an AI can follow. Every policy keeps the name of the expert who set it.",
         "It gets there by asking the expert good questions. It shows the expert what's already known and asks about one thing at a time. The first question is the one whose answer settles the most. In step 9 the Sales expert gets a single question. The same discount had needed approval three times that quarter.",
         "CenterStart is live today."
       ]
@@ -19,7 +19,7 @@
       "product": "CenterEye",
       "text": [
         "A new AI chat usually knows little about your work. You end up explaining it again.",
-        "CenterEye keeps one record for each client or project. The rules that apply are written down in it. Each AI you connect reads from that record. The next chat picks up where the last one stopped. In step 2 the salesperson asks their agent for a contract. CenterEye hands the agent the company's rules and the salesperson's own accounts and history.",
+        "CenterEye keeps one record for each client or project. The policies that apply are written down in it. Each AI you connect reads from that record. The next chat picks up where the last one stopped. In step 2 the salesperson asks their agent for a contract. CenterEye hands the agent the company's shared context and the salesperson's own accounts and history.",
         "CenterEye has been live since November 11, 2026."
       ]
     },
@@ -29,7 +29,7 @@
       "name": "SCOPE",
       "product": "CenterSquare",
       "text": [
-        "A rule that fits the Sales team may not fit Legal. A manager can approve more than a new hire. CenterSquare sends each rule only as far as it should go. Some rules cover the whole company. Others cover one team or one person.",
+        "A policy that fits the Sales team may not fit Legal. A manager can approve more than a new hire. CenterSquare sends each policy only as far as it should go. Some policies cover the whole company. Others cover one group or one person.",
         "In step 5 the Sales team's discount limit is 25%. The salesperson's own limit is 10%. The draft asks for 20%. That's more than the salesperson can approve. The sales manager decides.",
         "CenterSquare's shared spaces are live today. People in a space see what's in it. The rest of CenterSquare is still being designed."
       ]
@@ -51,9 +51,9 @@
       "name": "GOVERN",
       "product": "CenterGovern",
       "text": [
-        "CenterGovern is the gold gate at each handoff in the picture. It also keeps the record of what each gate decided.",
+        "CenterGovern is the policy gate at each handoff in the picture. It also keeps the audit trail of what each gate decided.",
         "Months later you can still look up any decision and the reason behind it.",
-        "The record also shows when people keep asking to go past a rule. That's what starts step 9.",
+        "The audit trail also shows when people keep asking for the same exception. That's what starts step 9.",
         "CenterGovern isn't built yet."
       ]
     }

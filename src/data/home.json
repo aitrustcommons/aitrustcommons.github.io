@@ -6,12 +6,12 @@
     "label": "November 2026"
   },
   "overview": [
-    "The picture follows one contract from a company to its customer and back. A salesperson's AI agent drafts it. Experts write down their rules in step 1. Both companies sign in step 8. In step 9 a question goes back to the experts.",
-    "Each time the work changes hands, AI governance kicks in. The picture shows it as a gold gate. The gate looks at who asked for the work and why. Then it checks that against the rules. The work goes through, waits for a person to decide, or stops. Each decision goes into the record with its reason.",
+    "The picture follows one contract from a company to its customer and back. A salesperson's AI agent drafts it. Experts write their judgment down as policy in step 1. Both companies sign in step 8. In step 9 a question goes back to the experts.",
+    "Each time the work changes hands, AI governance kicks in. The picture shows it as a policy gate. The gate reads the intent: who asked for the work, why and on whose authority. Then it enforces the policies that apply. The work goes through, escalates to a person in the loop, or stops. Each decision goes into the audit trail with its reason.",
     "The nine steps below follow the numbers on the picture."
   ],
   "contents": {
-    "1": "The experts' rules",
+    "1": "The experts' policies",
     "2": "The ask",
     "3": "The draft",
     "4": "Customer details from Salesforce",
@@ -21,7 +21,7 @@
     "8": "Signed",
     "9": "Back to the experts"
   },
-  "govern_line": "Four of the pieces do the work. Govern checks it at every gate and keeps the record.",
+  "govern_line": "Four of the pieces do the work. Govern enforces policy at every gate and keeps the audit trail.",
   "key_title": "Reading the gates",
   "intro": {
     "title": "Why AI governance",
@@ -29,20 +29,20 @@
       {
         "heading": "Why it's needed",
         "paragraphs": [
-          "AI agents now do work for people. They draft contracts and pull customer records. An agent follows the instructions in front of it. It usually can't tell who set a rule or why.",
-          "AI governance keeps that work inside a company's rules. It also lets the company show later who decided what and why. Today a lot of it is a policy on paper and an audit after the fact."
+          "AI agents now do work for people. They draft contracts and pull customer records. An agent follows the instructions in front of it. It usually can't tell who set a policy or why.",
+          "AI governance keeps that work inside a company's policies. It also lets the company show later who decided what and why. Today a lot of it is a policy on paper and an audit after the fact."
         ]
       },
       {
         "heading": "Where it has to happen",
         "paragraphs": [
-          "An agent inside a team works under that team's rules and limits. A salesperson's agent can offer only what that salesperson may offer. Trouble starts when work changes hands. A contract goes from Sales to Legal. Then it goes out to the customer. The rules change at each handoff. The reason behind the request can get lost along the way. My view is that governance has to happen at each handoff."
+          "An agent inside a team works under that team's policies and limits. A salesperson's agent can offer only what that salesperson may offer. Trouble starts when work changes hands. A contract goes from Sales to Legal. Then it goes out to the customer. The policies change at each handoff. The reason behind the request can get lost along the way. My view is that governance has to happen at each handoff."
         ]
       },
       {
         "heading": "What I'm building",
         "paragraphs": [
-          "I'm building five products that work together. They let a company hand work to AI agents and still check that the work kept to its rules. Each one has its own section below the picture. You can use CenterEye today. Parts of three others already run. CenterGovern does the checking at each handoff. It isn't built yet."
+          "I'm building five products that work together. They let a company hand work to AI agents and still check that the work kept to its policies. Each one has its own section below the picture. You can use CenterEye today. Parts of three others already run. CenterGovern does the checking at each handoff. It isn't built yet."
         ]
       }
     ]
