@@ -6,46 +6,45 @@
     "label": "November 2026"
   },
   "overview": [
-    "The picture follows one piece of work from a company to its customer and back: a salesperson's AI agent drafting a contract. It starts with experts writing down their rules and ends with both companies signing. Then it loops back to the experts so the rules can get better.",
-    "Every time the work crosses a line (between a person and an agent, between teams or between companies) AI governance kicks in. The picture shows it as a gold gate. The gate checks the intent behind the work against the rules. Then it lets the work pass, pulls in a person to approve, or stops it. Each decision goes into the record with its reason.",
+    "The picture follows one contract from a company to its customer and back. A salesperson's AI agent drafts it. Experts write down their rules in step 1. Both companies sign in step 8. In step 9 a question goes back to the experts.",
+    "Each time the work changes hands, AI governance kicks in. The picture shows it as a gold gate. The gate looks at who asked for the work and why. Then it checks that against the rules. The work goes through, waits for a person to decide, or stops. Each decision goes into the record with its reason.",
     "The nine steps below follow the numbers on the picture."
   ],
   "contents": {
-    "1": "Codify",
+    "1": "The experts' rules",
     "2": "The ask",
     "3": "The draft",
-    "4": "Conduit: Salesforce",
-    "5": "Scope",
-    "6": "Conduit: Legal's review",
-    "7": "Conduit: the customer's review",
+    "4": "Customer details from Salesforce",
+    "5": "The discount check",
+    "6": "Legal's review",
+    "7": "The customer's review",
     "8": "Signed",
-    "9": "Back to Codify"
+    "9": "Back to the experts"
   },
-  "govern_line": "Govern is the gates and the record, running through the other four.",
+  "govern_line": "Four of the pieces do the work. Govern checks it at every gate and keeps the record.",
   "key_title": "Reading the gates",
   "intro": {
     "title": "Why AI governance",
     "sections": [
       {
-        "heading": "Why we need it",
+        "heading": "Why it's needed",
         "paragraphs": [
-          "AI agents now do work for people. They draft contracts, pull customer records and send documents to other companies. An agent does what it's asked. It can't tell who set a rule, why the rule exists or where it stops.",
-          "AI governance keeps that work inside a company's rules. It also lets the company show later who decided what and why. Today most of it lives in policies and audits that come after the fact."
+          "AI agents now do work for people. They draft contracts and pull customer records. An agent follows the instructions in front of it. It usually can't tell who set a rule or why.",
+          "AI governance keeps that work inside a company's rules. It also lets the company show later who decided what and why. Today a lot of it is a policy on paper and an audit after the fact."
         ]
       },
       {
         "heading": "Where it has to happen",
         "paragraphs": [
-          "Inside a team, an agent works under that team's rules and limits. A salesperson's agent can offer only what that salesperson may offer. The harder part is the crossing. Work moves from a person to an agent, from Sales to Legal, from one company to another. At each crossing the rules change and the intent can get lost. My view is that governance has to happen right there: each time work changes hands."
+          "An agent inside a team works under that team's rules and limits. A salesperson's agent can offer only what that salesperson may offer. Trouble starts when work changes hands. A contract goes from Sales to Legal. Then it goes out to the customer. The rules change at each handoff. The reason behind the request can get lost along the way. My view is that governance has to happen at each handoff."
         ]
       },
       {
-        "heading": "How the Center pieces help",
+        "heading": "What I'm building",
         "paragraphs": [
-          "I'm building five pieces that work together. They let a company hand work to AI agents and still know the work stayed inside its rules. CenterStart turns an expert's judgment into rules. CenterEye gives every AI you use the same context. CenterSquare makes sure each rule reaches the right team or person. Work moves between people, agents and companies through CenterLoop. Running through all four is CenterGovern: the gates and the record. Some of it runs today. CenterGovern isn't built yet."
+          "I'm building five products that work together. They let a company hand work to AI agents and still check that the work kept to its rules. Each one has its own section below the picture. You can use CenterEye today. Parts of three others already run. CenterGovern does the checking at each handoff. It isn't built yet."
         ]
       }
-    ],
-    "closing": "The picture shows what that looks like, step by step."
+    ]
   }
 }

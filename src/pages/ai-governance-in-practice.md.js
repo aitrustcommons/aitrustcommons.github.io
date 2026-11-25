@@ -8,7 +8,7 @@ import site from '../data/site.json';
 function part(p) {
   if (p.kind === 'gate') {
     const word = { PASS: 'Pass', 'NEEDS APPROVAL': 'Needs approval', BLOCKED: 'Blocked', 'FEEDS BACK': 'Feeds back' }[p.word] ?? p.word;
-    return [`- Gate, ${word.toLowerCase()} (${p.crossing}): ${p.text.join(' ')}`,
+    return [`- Gate (${p.crossing}): ${word}. ${p.text.join(' ')}`,
       ...p.fields.map((f) => `  - ${f.label}: ${f.value}`),
       `  - Recorded: ${p.recorded}`].join('\n');
   }
@@ -19,10 +19,9 @@ function part(p) {
 export function GET() {
   const lines = [
     `# ${picture.title}`, '', site.description, '',
-    `Version ${home.version.number}, ${home.version.label}. ${site.url}/`, '',
+    `Version ${home.version.number} · ${home.version.label} · ${site.url}/`, '',
     `## ${home.intro.title}`, '',
     ...home.intro.sections.flatMap((x) => [`### ${x.heading}`, '', ...x.paragraphs.flatMap((p) => [p, ''])]),
-    home.intro.closing, '',
     '## Overview', '', ...home.overview.flatMap((p) => [p, '']),
   ];
   for (const s of picture.steps) {
@@ -36,7 +35,7 @@ export function GET() {
     const line = picture.pieces.find((x) => x.name === `${p.name} · ${p.product}`)?.line ?? '';
     lines.push(`### ${p.name} · ${p.product}`, '', line, '', ...p.text.flatMap((t) => [t, '']));
   }
-  lines.push('## Every gate', '', ...picture.gate_lines.map((g) => `- ${g}`),
+  lines.push(`## ${home.key_title}`, '', ...picture.gate_lines.map((g) => `- ${g}`),
     ...picture.outcomes.map((o) => `- ${o.word}: ${o.line}`), '',
     `## ${picture.record.head}`, '', picture.record.body, '',
     `## ${picture.loop.head}`, '', picture.loop.body, '',

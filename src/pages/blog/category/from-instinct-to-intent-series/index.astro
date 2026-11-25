@@ -15,7 +15,7 @@ const posts = (await allPosts()).filter(({ post }) => isSeries(post));
     <div class="list-head">
       <p class="kicker">FROM INSTINCT TO INTENT™ SERIES</p>
       <h1 class="page-title">From Instinct to Intent Series</h1>
-      <p class="lede">Five articles on the structural gap between human intent and machine execution, by Nikhil Singhal.</p>
+      <p class="lede">Nikhil Singhal's five articles on the structural gap between human intent and machine execution.</p>
     </div>
     <div class="post-list">
       {posts.map(({ post, title }) => <PostRow post={post} title={title} />)}

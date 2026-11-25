@@ -6,7 +6,7 @@ export async function GET(context) {
   const posts = await allPosts();
   return rss({
     title: 'From Instinct to Intent™',
-    description: 'Articles on the structural gap between human intent and machine execution, by Nikhil Singhal. AI Trust Commons.',
+    description: "Nikhil Singhal's articles on the structural gap between human intent and machine execution. Published by AI Trust Commons.",
     site: context.site,
     items: posts.map(({ post, title }) => ({
       title,

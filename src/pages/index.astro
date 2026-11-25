@@ -25,7 +25,7 @@ const img = (name: string) => files[`/src/assets/picture/${name}.png`].default;
 const stepImages = (n: number, head: string) =>
   (n === 6 ? ['step6', 'step6b'] : [`step${n}`]).map((name) => ({
     src: img(name),
-    alt: `Step ${n} on the picture, close up`,
+    alt: `Close-up of step ${n} on the picture`,
     full: img(name).src,
   }));
 
@@ -69,12 +69,11 @@ const latest = (await allPosts()).slice(0, 3);
           {sec.paragraphs.map((t) => <p>{t}</p>)}
         </div>
       ))}
-      <p class="intro-closing">{home.intro.closing}</p>
     </section>
 
     <figure class="overview">
       <a href="/picture/">
-        <Image src={img('overview')} alt="The whole picture: AI governance in practice, from the experts' rules to the signed contract and back" widths={[720, 1200, 2400]} sizes="(max-width: 1200px) 100vw, 1136px" loading="eager" />
+        <Image src={img('overview')} alt="The AI governance in practice picture. It follows a contract from the experts' rules to both signatures and back to the experts." widths={[720, 1200, 2400]} sizes="(max-width: 1200px) 100vw, 1136px" loading="eager" />
       </a>
       <figcaption><a href="/picture/">Open the full picture</a></figcaption>
     </figure>

@@ -7,9 +7,9 @@
       "name": "CODIFY",
       "product": "CenterStart",
       "text": [
-        "Most of what makes a company work lives in a few people's heads: how big a discount is fine, which contract clause is never OK. Codify turns that judgment into rules an AI can follow. Every rule keeps the name of the expert who set it.",
-        "The trick is in how you ask. Give the expert what's already known. Ask about one thing at a time. Start with the question that settles the most. In step 9 the Sales expert gets a single question after the same exception came up three times.",
-        "CenterStart is running today."
+        "A lot of what a company knows sits in a few people's heads. One expert knows how big a discount is fine. Another knows which contract clause is never OK. CenterStart writes that know-how down as rules an AI can follow. Every rule keeps the name of the expert who set it.",
+        "It gets there by asking the expert good questions. It shows the expert what's already known and asks about one thing at a time. The first question is the one whose answer settles the most. In step 9 the Sales expert gets a single question. The same discount had needed approval three times that quarter.",
+        "CenterStart is live today."
       ]
     },
     {
@@ -18,8 +18,8 @@
       "name": "CONTEXT",
       "product": "CenterEye",
       "text": [
-        "A new AI chat starts from nothing. You explain your work again. The AI guesses the rest.",
-        "Context keeps one record for each client or project. The rules that apply are written down in it. Every AI you use reads from it. The next chat starts where the last one stopped. In step 2 the salesperson asks their agent for a contract. Their CenterEye hands over the company's rules along with their own accounts and history.",
+        "A new AI chat usually knows little about your work. You end up explaining it again.",
+        "CenterEye keeps one record for each client or project. The rules that apply are written down in it. Each AI you connect reads from that record. The next chat picks up where the last one stopped. In step 2 the salesperson asks their agent for a contract. CenterEye hands the agent the company's rules and the salesperson's own accounts and history.",
         "CenterEye has been live since November 11, 2026."
       ]
     },
@@ -29,9 +29,9 @@
       "name": "SCOPE",
       "product": "CenterSquare",
       "text": [
-        "A rule that fits the Sales team may not fit Legal. A manager's limit isn't a new hire's limit. Scope sends each rule to the right place: the whole company, one team or one person.",
-        "In step 5 the team can approve up to 25% and the salesperson up to 10%. The draft asks for 20%. That's more than the salesperson can approve. The sales manager is pulled in to decide.",
-        "CenterSquare's spaces are live today. More of it is still in design."
+        "A rule that fits the Sales team may not fit Legal. A manager can approve more than a new hire. CenterSquare sends each rule only as far as it should go. Some rules cover the whole company. Others cover one team or one person.",
+        "In step 5 the Sales team's discount limit is 25%. The salesperson's own limit is 10%. The draft asks for 20%. That's more than the salesperson can approve. The sales manager decides.",
+        "CenterSquare's shared spaces are live today. People in a space see what's in it. The rest of CenterSquare is still being designed."
       ]
     },
     {
@@ -40,9 +40,9 @@
       "name": "CONDUIT",
       "product": "CenterLoop",
       "text": [
-        "Most work crosses lines. It goes from a person to an agent, from Sales to Legal, and from your company to a customer and back. Conduit carries the work across those lines and brings the answers back. A person is pulled in when a decision needs them. Everyone else can watch and step in.",
-        "In step 6 the draft goes from Sales to Legal. In step 7 it goes out to the customer's lawyers and comes back with their changes.",
-        "CenterLoop is running today. Its first part went live on November 19, 2026: messages between AI chats."
+        "Work rarely stays with one person or one company. CenterLoop carries it each time it moves and brings the answer back. When a decision needs a person, CenterLoop asks one. Others working on the deal can watch and step in.",
+        "Step 6 sends the draft from Sales to Legal. In step 7 it goes out to the customer's lawyers. It comes back with their changes.",
+        "CenterLoop's first part went live on November 19, 2026. One AI chat can now leave a message for another."
       ]
     },
     {
@@ -51,9 +51,9 @@
       "name": "GOVERN",
       "product": "CenterGovern",
       "text": [
-        "Govern runs through the other four. It's the gold gate at every crossing in the picture. It's also the record those gates keep.",
-        "Each gate checks the work against the rules and the intent behind it. Then it lets the work pass, asks a person or stops it. Every decision is written down with its reason. Months later you can still see what happened and why.",
-        "The record is also how the rules get better. In step 9 it spots the same exception three times and asks the expert about it.",
+        "CenterGovern is the gold gate at each handoff in the picture. It also keeps the record of what each gate decided.",
+        "Months later you can still look up any decision and the reason behind it.",
+        "The record also shows when people keep asking to go past a rule. That's what starts step 9.",
         "CenterGovern isn't built yet."
       ]
     }
