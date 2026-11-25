@@ -1,17 +1,17 @@
 ---
-// About, draft 2: built from the canonical bio in the about-nikhil card
-// (agreed Nov 12, 2026). Nikhil edits it before launch.
+// About: built from the canonical bio in the about-nikhil card (agreed
+// Nov 12, 2026). Approved by Nikhil on Nov 25, 2026.
 import Base from '../layouts/Base.astro';
 
 // Set to true once Nikhil has reviewed this page. The production build refuses to run until then.
-const reviewed = false;
+const reviewed = true; // Nikhil approved this page on Nov 25, 2026
 if (import.meta.env.PROD && process.env.REQUIRE_PIECE_TEXT === '1' && !reviewed) {
   throw new Error('About page: waiting for Nikhil\'s review. Set reviewed to true in src/pages/about.astro.');
 }
 ---
 <Base
   title="About AI Trust Commons"
-  description="Nikhil Singhal, AI-first builder and architect, going deep on human intent and AI. AI Trust Commons is where he does that work in the open."
+  description="Nikhil Singhal is an AI-first builder and architect going deep on human intent and AI. AI Trust Commons is where he does that work in the open."
   current="about"
 >
   <div class="page">
@@ -32,7 +32,7 @@ if (import.meta.env.PROD && process.env.REQUIRE_PIECE_TEXT === '1' && !reviewed)
         <li><a href="/blog/">From Instinct to Intent™</a>, my article series</li>
         <li>A <a href="https://www.regulations.gov/comment/NIST-2025-0035-0424">public comment to NIST</a> on AI agent governance, and a <a href="/blog/2026/03/23/nccoe-ai-agent-identity-authorization-response/">response to its NCCoE paper</a> on agent identity and authorization</li>
       </ul>
-      <p>Three decades of building came before the AI: enterprise scale at Microsoft, Expedia and T-Mobile, and startups where I served as CTO. Compliance was part of that work, across telecom, travel, fintech, healthcare, education, green energy and IoT. I've led teams of over 200 across product, engineering and design. Seattle, WA.</p>
+      <p>Three decades of building came before the AI: enterprise scale at Microsoft, Expedia and T-Mobile, and startups where I served as CTO. Compliance was part of that work in telecom, travel, fintech, healthcare, education, green energy and IoT. I've led teams of over 200 across product, engineering and design. Seattle, WA.</p>
       <h2>Published work</h2>
       <ul>
         <li><a href="https://doi.org/10.5281/zenodo.18917473">Discovering Intent</a> (DOI 10.5281/zenodo.18917473)</li>
