@@ -1,6 +1,6 @@
 # AI Trust Commons
 
-> Nikhil Singhal's AI governance work. The home page shows AI governance in practice. Nine steps follow one sales contract as AI agents hand work between teams and companies. A gate checks the rules at each handoff.
+> Nikhil Singhal's AI governance work. The home page, "AI governance in practice", follows one sales contract in nine steps as people and AI agents hand work between teams and companies. Each handoff passes through a policy gate.
 
 Writing is licensed CC BY 4.0. Credit Nikhil Singhal.
 
@@ -8,7 +8,8 @@ Writing is licensed CC BY 4.0. Credit Nikhil Singhal.
 
 - [AI governance in practice, plain text](https://aitrustcommons.org/ai-governance-in-practice.md): the home page's words without the design
 - [About Nikhil Singhal](https://aitrustcommons.org/about/): who he is and his published work
-- [From Instinct to Intent™](https://aitrustcommons.org/blog/): his posts on the gap between human intent and machine execution
+- [From Instinct to Intent™](https://aitrustcommons.org/blog/category/from-instinct-to-intent-series/): his article series on the gap between what a person means and what the machine does
+- [Blog](https://aitrustcommons.org/blog/): all posts
 
 ## Posts
 

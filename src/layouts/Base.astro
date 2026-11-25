@@ -27,7 +27,7 @@ const { title, description = site.description, image, post, current, mermaid = f
 const canonical = new URL(Astro.url.pathname, site.url).href;
 const ogImage = image ? new URL(image, site.url).href : new URL(site.defaultCard, site.url).href;
 const isCard = !image;
-const shareAlt = imageAlt ?? 'AI Trust Commons: AI governance in practice';
+const shareAlt = imageAlt ?? 'AI governance in practice. Humans and AI agents working as partners under rules set by experts. AI Trust Commons.';
 const license = 'https://creativecommons.org/licenses/by/4.0/';
 const fullTitle = `${title} - ${site.name}`;
 
