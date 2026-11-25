@@ -1,0 +1,32 @@
+{
+  "discovering-intent": {
+    "part": 1,
+    "medium": "https://nikhilsinghal-ai-trust-commons.medium.com/discovering-intent-the-journey-that-starts-before-youre-ready-4a8a69fce594",
+    "next": "languages-designed-for-humans"
+  },
+  "languages-designed-for-humans": {
+    "part": 2,
+    "medium": "https://medium.com/@nikhilsinghal-ai-trust-commons/we-are-making-ai-write-code-in-languages-designed-for-humans-that-is-the-problem-d6721ab296ad",
+    "next": "engine-vs-steering-wheel"
+  },
+  "engine-vs-steering-wheel": {
+    "part": 3,
+    "medium": "https://nikhilsinghal-ai-trust-commons.medium.com/everyone-is-arguing-about-the-engine-who-is-building-the-steering-wheel-ai-trust-commons-c7b81a7430f0",
+    "next": "stop-calling-it-artificial"
+  },
+  "stop-calling-it-artificial": {
+    "part": 4,
+    "medium": "https://nikhilsinghal-ai-trust-commons.medium.com/stop-calling-it-artificial-start-building-with-intelligence-ai-trust-commons-3c163ef80461",
+    "next": "discovering-humanity-through-ai"
+  },
+  "discovering-humanity-through-ai": {
+    "part": 5,
+    "medium": "https://nikhilsinghal-ai-trust-commons.medium.com/discovering-humanity-through-ai-1cec17e21be5",
+    "next": null
+  },
+  "nccoe-ai-agent-identity-authorization-response": {
+    "part": null,
+    "medium": "https://nikhilsinghal-ai-trust-commons.medium.com/response-to-nccoe-concept-paper-intent-conveyance-as-the-missing-layer-in-ai-agent-identity-and-e8db45144de5",
+    "next": null
+  }
+}

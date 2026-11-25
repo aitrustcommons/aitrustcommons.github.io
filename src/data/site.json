@@ -1,0 +1,16 @@
+{
+  "name": "AI Trust Commons",
+  "url": "https://aitrustcommons.org",
+  "description": "Humans and AI agents working as partners under rules set by experts.",
+  "keywords": "AI Trust Commons, AI governance, AI agents, human-AI partnership, NIST, Intent Layer, From Instinct to Intent",
+  "author": "Nikhil Singhal",
+  "twitter": "@nikhilsinghal",
+  "ga4": "G-RCJMWNTPNL",
+  "defaultCard": "/assets/brand/aitc-social-card-1200x630.png",
+  "footerLinks": [
+    { "label": "nikhilsinghal.com", "href": "https://nikhilsinghal.com" },
+    { "label": "GitHub", "href": "https://github.com/aitrustcommons" },
+    { "label": "LinkedIn", "href": "https://linkedin.com/in/nikhilsinghal" },
+    { "label": "Email", "href": "mailto:nikhil@aitrustcommons.org" }
+  ]
+}

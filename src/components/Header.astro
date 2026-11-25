@@ -1,0 +1,17 @@
+---
+interface Props { current?: 'home' | 'blog' | 'about' }
+const { current } = Astro.props;
+---
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <img src="/assets/brand/aitc-mark.svg" alt="" width="26" height="26">
+      AI Trust Commons
+    </a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="/blog/" aria-current={current === 'blog' ? 'page' : undefined}>Blog</a>
+      <a href="/about/" aria-current={current === 'about' ? 'page' : undefined}>About</a>
+    </nav>
+  </div>
+  <hr class="rule">
+</header>

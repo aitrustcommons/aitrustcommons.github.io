@@ -1,0 +1,87 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://nikhilsinghal.com/#person",
+      "name": "Nikhil Singhal",
+      "givenName": "Nikhil",
+      "familyName": "Singhal",
+      "jobTitle": "Enterprise AI Architect & Builder | CTO & VP Engineering | Founder, AI Trust Commons",
+      "url": "https://nikhilsinghal.com",
+      "image": "https://nikhilsinghal.com/img/nikhil-singhal-portrait-1200.jpg",
+      "email": "mailto:nikhil@omspark.com",
+      "telephone": "+1-206-226-2722",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Seattle",
+        "addressRegion": "WA",
+        "addressCountry": "US"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/nikhilsinghal/",
+        "https://github.com/nikhilsi",
+        "https://orcid.org/0009-0003-5449-6830",
+        "https://nikhilsinghal-ai-trust-commons.medium.com/",
+        "https://about.me/nikhil.singhal",
+        "https://x.com/nikhilsinghal",
+        "https://www.youtube.com/@nikhilsinghal",
+        "https://aitrustcommons.org",
+        "https://hipcharter.com",
+        "https://omspark.com",
+        "https://www.crunchbase.com/person/nikhil-singhal"
+      ],
+      "knowsAbout": [
+        "Artificial Intelligence",
+        "AI Governance",
+        "Human-AI Interaction",
+        "Engineering Leadership",
+        "AI Trust Commons",
+        "Human Intelligence Partnership Charter",
+        "Intent Layer",
+        "Model Context Protocol",
+        "Large Language Models",
+        "AI Agents",
+        "AI Memory"
+      ],
+      "alumniOf": [
+        {
+          "@type": "EducationalOrganization",
+          "name": "Harvard University"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "name": "Bangalore University"
+        }
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "OmSpark LLC",
+        "url": "https://omspark.com"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://aitrustcommons.org/#organization",
+      "name": "AI Trust Commons",
+      "url": "https://aitrustcommons.org",
+      "founder": {
+        "@id": "https://nikhilsinghal.com/#person"
+      },
+      "sameAs": [
+        "https://github.com/aitrustcommons",
+        "https://nikhilsinghal-ai-trust-commons.medium.com/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://aitrustcommons.org/#website",
+      "url": "https://aitrustcommons.org",
+      "name": "AI Trust Commons",
+      "publisher": {
+        "@id": "https://aitrustcommons.org/#organization"
+      },
+      "inLanguage": "en"
+    }
+  ]
+}

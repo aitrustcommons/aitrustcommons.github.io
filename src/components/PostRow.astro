@@ -1,0 +1,14 @@
+---
+import { postPath, displayDate, isoDay, readMinutes, isSeries, type Post } from '../lib/posts';
+interface Props { post: Post; title: string }
+const { post, title } = Astro.props;
+const label = isSeries(post) ? 'From Instinct to Intent™ series' : post.data.categories.join(', ');
+---
+<article class="post-row">
+  <time datetime={isoDay(post)}>{displayDate(post)}</time>
+  <div class="post-text">
+    <h2><a href={postPath(post)}>{title}</a></h2>
+    <p>{post.data.description}</p>
+    <div class="meta"><span>{label}</span><span>{readMinutes(post.body ?? '')} min read</span></div>
+  </div>
+</article>

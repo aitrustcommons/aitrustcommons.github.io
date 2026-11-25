@@ -1,0 +1,106 @@
+---
+// Every page's head: the same tags and structured data as the old site
+// (overrides/main.html), with the intended changes in build-spec.md section 7.
+import { Font } from 'astro:assets';
+import site from '../data/site.json';
+import graph from '../data/identity-graph.json';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;            // the page's own title, without the site name
+  description?: string;
+  image?: string;           // site path or absolute URL; defaults to the card
+  post?: { published: string; categories: string[] };
+  current?: 'home' | 'blog' | 'about';
+  mermaid?: boolean;
+  noindex?: boolean;
+}
+
+const { title, description = site.description, image, post, current, mermaid = false, noindex = false } = Astro.props;
+const canonical = new URL(Astro.url.pathname, site.url).href;
+const ogImage = image ? new URL(image, site.url).href : new URL(site.defaultCard, site.url).href;
+const isCard = !image;
+const fullTitle = `${title} - ${site.name}`;
+
+const blogPosting = post && {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: title,
+  description,
+  image: ogImage,
+  datePublished: post.published,
+  dateModified: post.published,
+  author: { '@id': 'https://nikhilsinghal.com/#person' },
+  publisher: { '@id': 'https://aitrustcommons.org/#organization' },
+  mainEntityOfPage: canonical,
+  inLanguage: 'en',
+  ...(post.categories.length ? { articleSection: post.categories } : {}),
+};
+const ga = import.meta.env.PROD;
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{fullTitle}</title>
+  <meta name="description" content={description}>
+  <link rel="canonical" href={canonical}>
+  {noindex && <meta name="robots" content="noindex">}
+  <link rel="icon" type="image/png" sizes="48x48" href="/assets/brand/favicon-48.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16.png">
+  <link rel="apple-touch-icon" href={`${site.url}/assets/brand/favicon-180.png`}>
+  <link rel="alternate" type="application/rss+xml" title="From Instinct to Intent™" href="/rss.xml">
+  <link rel="sitemap" href="/sitemap.xml">
+  <Font cssVariable="--font-inter" preload />
+  <Font cssVariable="--font-grotesk" />
+
+  <meta property="og:type" content={post ? 'article' : 'website'}>
+  <meta property="og:site_name" content={site.name}>
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:url" content={canonical}>
+  <meta property="og:image" content={ogImage}>
+  {isCard && <meta property="og:image:width" content="1200">}
+  {isCard && <meta property="og:image:height" content="630">}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content={title}>
+  <meta name="twitter:description" content={description}>
+  <meta name="twitter:image" content={ogImage}>
+  <meta name="twitter:site" content={site.twitter}>
+  <meta name="author" content={site.author}>
+  <meta name="keywords" content={site.keywords}>
+
+  <script type="application/ld+json" set:html={JSON.stringify(graph)} />
+  {blogPosting && <script type="application/ld+json" set:html={JSON.stringify(blogPosting)} />}
+
+  {ga && (
+    <>
+      <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${site.ga4}`}></script>
+      <script is:inline define:vars={{ id: site.ga4 }}>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', id);
+      </script>
+    </>
+  )}
+  {mermaid && (
+    <script is:inline type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.17.2/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
+    </script>
+  )}
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <Header current={current} />
+  <main id="main">
+    <slot />
+  </main>
+  <Footer />
+</body>
+</html>

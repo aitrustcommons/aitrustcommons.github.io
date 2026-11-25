@@ -1,0 +1,24 @@
+---
+// Kept at its old address on purpose: trademark application 99690685 cites
+// this series index as evidence. Never redirect it.
+import Base from '../../../../layouts/Base.astro';
+import PostRow from '../../../../components/PostRow.astro';
+import { allPosts, isSeries } from '../../../../lib/posts';
+const posts = (await allPosts()).filter(({ post }) => isSeries(post));
+---
+<Base
+  title="From Instinct to Intent Series"
+  description="The From Instinct to Intent™ series by Nikhil Singhal: five articles on the structural gap between human intent and machine execution."
+  current="blog"
+>
+  <div class="wrap">
+    <div class="list-head">
+      <p class="kicker">FROM INSTINCT TO INTENT™ SERIES</p>
+      <h1 class="page-title">From Instinct to Intent Series</h1>
+      <p class="lede">Five articles on the structural gap between human intent and machine execution, by Nikhil Singhal.</p>
+    </div>
+    <div class="post-list">
+      {posts.map(({ post, title }) => <PostRow post={post} title={title} />)}
+    </div>
+  </div>
+</Base>
