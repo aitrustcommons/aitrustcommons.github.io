@@ -278,3 +278,14 @@ h1, h2, h3 { font-family: var(--display); color: var(--ink); text-wrap: balance;
 @media (max-width: 700px) {
   .prose pre.mermaid svg { min-width: 600px; }
 }
+
+/* Phones: one row of nine colored step numbers replaces the contents list (Nikhil, Nov 25) */
+.step-dots { display: none; }
+@media (max-width: 640px) {
+  .contents { display: none; }
+  .step-dots { display: flex; flex-direction: column; gap: 8px; flex: 1 1 100%; }
+  .step-dots .kicker { margin: 0; }
+  .step-dots-row { display: flex; flex-wrap: wrap; gap: 4px; }
+  .step-dot { width: 34px; height: 34px; border-radius: 50%; background: var(--mark); color: var(--white); display: flex; align-items: center; justify-content: center; font-family: var(--display); font-size: 16px; font-weight: 700; text-decoration: none; }
+  .step-dot:hover, .step-dot:focus-visible { color: var(--white); outline-offset: 2px; }
+}

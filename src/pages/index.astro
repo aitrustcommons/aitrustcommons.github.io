@@ -81,6 +81,15 @@ const latest = (await allPosts()).slice(0, 3);
         <a href="#versions">Versions</a>
       </nav>
 
+      <nav class="step-dots" aria-label="Steps">
+        <p class="kicker">THE NINE STEPS</p>
+        <div class="step-dots-row">
+          {picture.steps.map((s) => (
+            <a href={`#step${s.number}`} class={`step-dot tone-${s.color}`} aria-label={`Step ${s.number}: ${home.contents[String(s.number) as keyof typeof home.contents]}`}>{s.number}</a>
+          ))}
+        </div>
+      </nav>
+
       <div class="doc-main">
         <section id="overview" class="doc-section">
           <h2>Overview</h2>
