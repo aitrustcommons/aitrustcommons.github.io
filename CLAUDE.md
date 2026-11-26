@@ -70,6 +70,14 @@ Search engines and AI answer engines, right after launch (from the Nov 25 SEO an
    A 200 or 202 means it worked.
 6. A week later: Search Console, Pages, "Why pages aren't indexed". A post marked "Duplicate, Google chose different canonical" is probably losing to its Medium copy.
 
+## The HIP Charter (moved here from hipcharter.com, Nov 25, 2026)
+
+- The words: `src/content/hip/charter.md` and `story.md`. The pages: `src/pages/hip-charter/`. The plain-text copy: `src/pages/hip-charter.md.js`. Images: `public/hip-charter/images/`.
+- Section names from the old site are link targets that must not change. `scripts/verify.mjs` lists them (HIP_ANCHORS).
+- hipcharter.com forwards here with true 301s, through Cloudflare Single Redirects on the hipcharter.com zone (proxied). Images, robots.txt, sitemap.xml and the IndexNow key still come from the hipcharter.com repo's `forwards/` folder on GitHub Pages. That repo's README has its rollback.
+- To undo the Cloudflare part: delete the redirect rules in the zone's dynamic redirect ruleset, then set the four A records and the www CNAME back to DNS only. The forward pages then take over by themselves.
+- Google Search Console: a Change of Address from hipcharter.com to aitrustcommons.org started on Nov 25, 2026. Keep hipcharter.com registered and redirecting for at least a year.
+
 ## Rollback (for the first month)
 
 1. Disable the deploy workflow first (`gh workflow disable deploy.yml`), so a push to main can't put the new site back.
