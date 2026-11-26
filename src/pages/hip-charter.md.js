@@ -10,6 +10,6 @@ export function GET() {
     .replace(/^<span id="[^"]+"><\/span>\n\n/gm, '')
     .replace(/\]\(\//g, `](${SITE}/`);
   const text = [`# ${field('title')}`, '', field('subtitle'), '',
-    `By Nikhil Singhal · March 2026 · ${SITE}/hip-charter/`, '', body.trim(), ''].join('\n');
+    `By Nikhil Singhal · Published March 17, 2026 · Updated November 2026 · ${SITE}/hip-charter/`, '', body.trim(), ''].join('\n');
   return new Response(text, { headers: { 'Content-Type': 'text/markdown; charset=utf-8' } });
 }

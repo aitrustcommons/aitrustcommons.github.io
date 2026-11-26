@@ -5,6 +5,10 @@ byline: "Nikhil Singhal · March 2026"
 source: "hipcharter.com/ and hipcharter.com/charter/, merged Nov 2026. Light-touch edits only; see ns-2026-the-big-push ai-trust-commons/site-redesign/hip-merge/content-pass.md"
 ---
 
+The Human Intelligence Partnership Charter (HIP Charter) is a charter by Nikhil Singhal. It was first published in March 2026 at hipcharter.com. It treats AI as a second form of intelligence and describes four patterns of human-AI partnership: Foundation, Tooling, Pipeline and Integration. At every pattern it names the same gap: the distance between what the human means and what the AI does.
+
+The HIP Charter is the premise behind [the picture](/): treat AI as a second form of intelligence, and design how the two work together. The picture shows that work governed at every handoff.
+
 As long as we call it Artificial Intelligence, we give ourselves permission to skip the communication infrastructure we would build for any human colleague. The HIP Charter starts with a different premise.
 
 ![A human silhouette and an AI wireframe figure reaching toward each other across a gap filled with falling code fragments, representing the intent gap between human meaning and machine execution](/hip-charter/images/hip-charter-hero-human-ai-intent-gap.jpeg)
@@ -73,6 +77,11 @@ Together they give a worldview (intelligence deserves structural respect), a blu
 
 The HIP Charter describes four patterns of human-AI partnership. They are petals of a bloom, and none sits above another. Each is valuable alone. The overlaps create depth. Full partnership lives at the center, where all four converge.
 
+- **Foundation.** AI as Build Partner. A developer pair-programming with GitHub Copilot. An architect sketching while Claude Code builds. Human steers, AI implements.
+- **Tooling.** Human-First, Zero AI Dependency. AI built it, but AI is not in it. If every API disappeared, these products would still work.
+- **Pipeline.** AI-Enhanced Systems. Zillow descriptions. Spotify playlists. Google Maps traffic. Users may never see the AI.
+- **Integration.** AI as Collaborative Component. Bloomberg Terminal. Tesla Autopilot. AI works alongside live data. Swap the model and the architecture survives.
+
 New petals can be added as new kinds of AI emerge: world models, embodied AI, whatever comes next. The charter grows with them.
 
 ![The four patterns of human-AI partnership: Foundation, Tooling, Pipeline, and Integration, each showing what the human brings and what AI brings](/hip-charter/images/hip-charter-four-patterns-foundation-tooling-pipeline-integration.png)
@@ -125,6 +134,13 @@ The four patterns create meaningful intersections. Each overlap tells a differen
 ### The 4 Triple Overlaps
 
 Here a system works across three patterns at once. This is where the most sophisticated systems sit.
+
+| Triple | What it means |
+|--------|--------------|
+| Foundation + Tooling + Pipeline | Built the system with AI, shipped tools that run independently, and curated the content pipeline. The full build-to-deliver chain without runtime AI dependency. |
+| Foundation + Tooling + Integration | Built the system with AI, shipped standalone tools, and AI reasons alongside live data at runtime. Development partnership plus runtime intelligence. |
+| Foundation + Pipeline + Integration | Built the system with AI, curated the data pipeline, and AI reasons over that data at runtime. Architecture through to live intelligence. |
+| Tooling + Pipeline + Integration | Standalone tools, curated pipeline and runtime AI. The only triple without Foundation. Someone else may have built the core system. |
 
 ### The Center (All Four)
 
@@ -223,7 +239,7 @@ Twelve steps. Human insight drove every critical turn: identifying risks, reject
 
 That is the HIP Charter in action. At the Foundation pattern. Using the same partnership dynamics the charter describes. The governance worked at every step.
 
-The full account, with all twelve steps and the eight drawings, is in [How the HIP Charter Was Made](/hip-charter/story/).
+The full account, with all twelve steps and the eight diagram versions, is in [How the HIP Charter Was Made](/hip-charter/story/).
 
 ## What Is Permanent, What May Change
 

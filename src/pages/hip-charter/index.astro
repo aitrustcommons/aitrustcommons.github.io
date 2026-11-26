@@ -7,7 +7,7 @@ import { Content, frontmatter } from '../../content/hip/charter.md';
 const SITE = 'https://aitrustcommons.org';
 const CHARTER_ID = `${SITE}/hip-charter/#charter`;
 const author = { '@type': 'Person', '@id': 'https://nikhilsinghal.com/#person', name: 'Nikhil Singhal', url: 'https://nikhilsinghal.com' };
-const description = 'The HIP Charter by Nikhil Singhal: four patterns of human-AI partnership, 15 positions on the map and the gap between human intent and machine execution at every pattern.';
+const description = 'The HIP Charter by Nikhil Singhal names four patterns of human-AI partnership (Foundation, Tooling, Pipeline, Integration) and the intent gap at each one.';
 const hero = '/hip-charter/images/hip-charter-hero-human-ai-intent-gap.jpeg';
 const ld = {
   '@context': 'https://schema.org',
@@ -53,11 +53,12 @@ const ld = {
     <p class="lede">{frontmatter.subtitle}</p>
     <div class="meta">
       <a class="author" href="/about/">Nikhil Singhal</a>
-      <span>March 2026</span>
+      <span>Published March 17, 2026</span>
+      <span>Updated November 2026</span>
+      <a href="/blog/2026/03/17/stop-calling-it-artificial/">Article version: Stop Calling It Artificial</a>
       <a href="/hip-charter/story/">How it was made</a>
       <a href="/hip-charter.md">Plain text</a>
     </div>
-    <p class="hip-link">The HIP Charter is the premise behind <a href="/">the picture</a>: treat AI as a second form of intelligence, and design how the two work together. The picture shows that work governed at every handoff.</p>
     <div class="prose">
       <Content />
     </div>
