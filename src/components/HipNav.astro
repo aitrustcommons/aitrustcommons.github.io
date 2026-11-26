@@ -1,0 +1,11 @@
+---
+// The HIP Charter's section menu, at the top of both HIP pages, so each page
+// is one click from the other. Nothing is hidden behind a hover or a tap.
+interface Props { current: 'charter' | 'story' }
+const { current } = Astro.props;
+---
+<nav class="section-nav" aria-label="HIP Charter">
+  <span class="section-nav-label">HIP Charter:</span>
+  <a href="/hip-charter/" aria-current={current === 'charter' ? 'page' : undefined}>The Charter</a>
+  <a href="/hip-charter/story/" aria-current={current === 'story' ? 'page' : undefined}>How it was made</a>
+</nav>

@@ -2,6 +2,7 @@
 // How the HIP Charter Was Made. Moved here from hipcharter.com in Nov 2026 (#625).
 // The words live in src/content/hip/story.md; old section names are kept so shared links still land.
 import Base from '../../../layouts/Base.astro';
+import HipNav from '../../../components/HipNav.astro';
 import { Content, frontmatter } from '../../../content/hip/story.md';
 
 const SITE = 'https://aitrustcommons.org';
@@ -30,7 +31,7 @@ const ld = {
 <Base title={frontmatter.title} description={description} published="2026-03-17" current="hip" ld={ld}>
   <div class="page">
     <span id="how-the-hip-charter-was-made"></span>
-    <p class="kicker"><a href="/hip-charter/">THE HIP CHARTER</a></p>
+    <HipNav current="story" />
     <h1 class="page-title">{frontmatter.title}</h1>
     <div class="meta">
       <a class="author" href="/about/">Nikhil Singhal</a>

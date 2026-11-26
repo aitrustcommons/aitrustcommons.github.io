@@ -152,6 +152,7 @@ check(ldTypes((await get('/hip-charter/')).html).includes('Article') && (await g
 const hipMd = await get('/hip-charter.md');
 check(hipMd.status === 200 && hipMd.html.startsWith('# The Human Intelligence Partnership Charter') && !hipMd.html.includes('<span'), 'the HIP Charter has a plain-text copy');
 check((await get('/')).html.includes('href="/hip-charter/"'), 'the header links to the HIP Charter');
+for (const p of HIP) { const h = (await get(p)).html; check(/aria-label="HIP Charter"/.test(h) && h.includes('href="/hip-charter/"') && h.includes('href="/hip-charter/story/"'), `${p} has the HIP section menu`); }
 check((rss.html.match(/<dc:creator>Nikhil Singhal<\/dc:creator>/g) || []).length === 6, 'every RSS item names Nikhil Singhal');
 check(!Object.keys(FORWARDS).some((p) => locs.includes(p)), 'the sitemap lists no forwarded address');
 const robots = await get('/robots.txt');

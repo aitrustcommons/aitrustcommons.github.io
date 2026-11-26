@@ -2,6 +2,7 @@
 // The HIP Charter. Moved here from hipcharter.com in Nov 2026 (#625).
 // The words live in src/content/hip/charter.md; old section names are kept so shared links still land.
 import Base from '../../layouts/Base.astro';
+import HipNav from '../../components/HipNav.astro';
 import { Content, frontmatter } from '../../content/hip/charter.md';
 
 const SITE = 'https://aitrustcommons.org';
@@ -49,6 +50,7 @@ const ld = {
   <div class="page">
     {/* ids the old hipcharter.com pages had at the top, so links to them still land */}
     <span id="the-human-intelligence-partnership-charter"></span><span id="stop-calling-it-artificial"></span><span id="stop-calling-it-artificial-start-building-with-intelligence"></span>
+    <HipNav current="charter" />
     <h1 class="page-title">{frontmatter.title}</h1>
     <p class="lede">{frontmatter.subtitle}</p>
     <div class="meta">
