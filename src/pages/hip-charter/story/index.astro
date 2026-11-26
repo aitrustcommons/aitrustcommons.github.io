@@ -21,13 +21,15 @@ const ld = {
   author,
   publisher: { '@id': `${SITE}/#organization` },
   isPartOf: { '@id': `${SITE}/#website` },
-  about: { '@id': CHARTER_ID },
+  image: `${SITE}/hip-charter/images/hip-charter-combination-lattice-full-poster.png`,
+  about: { '@type': 'CreativeWork', '@id': CHARTER_ID, name: 'The Human Intelligence Partnership Charter', url: `${SITE}/hip-charter/` },
   inLanguage: 'en',
   license: 'https://creativecommons.org/licenses/by/4.0/',
 };
 ---
-<Base title={frontmatter.title} description={description} current="hip" ld={ld}>
+<Base title={frontmatter.title} description={description} published="2026-03-17" current="hip" ld={ld}>
   <div class="page">
+    <span id="how-the-hip-charter-was-made"></span>
     <p class="kicker"><a href="/hip-charter/">THE HIP CHARTER</a></p>
     <h1 class="page-title">{frontmatter.title}</h1>
     <div class="meta">

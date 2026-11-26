@@ -20,10 +20,12 @@ interface Props {
   ld?: object;              // one more JSON-LD block for this page
   postExtra?: object;       // extra BlogPosting fields, such as the series link
   markdownAlt?: string;     // a plain-text copy of this page, for AI readers
+  imageSize?: [number, number];  // the share image's width and height, when it isn't the card
+  published?: string;       // an article that isn't a post: its first publication date (YYYY-MM-DD)
 }
 
 const { title, description = site.description, image, post, current, mermaid = false, noindex = false,
-  imageAlt, ld, postExtra, markdownAlt } = Astro.props;
+  imageAlt, ld, postExtra, markdownAlt, imageSize, published } = Astro.props;
 const canonical = new URL(Astro.url.pathname, site.url).href;
 const ogImage = image ? new URL(image, site.url).href : new URL(site.defaultCard, site.url).href;
 const isCard = !image;
@@ -70,7 +72,7 @@ const ga = import.meta.env.PROD;
   <Font cssVariable="--font-inter" />
   <Font cssVariable="--font-grotesk" />
 
-  <meta property="og:type" content={post ? 'article' : 'website'}>
+  <meta property="og:type" content={post || published ? 'article' : 'website'}>
   <meta property="og:site_name" content={site.name}>
   <meta property="og:title" content={title}>
   <meta property="og:description" content={description}>
@@ -79,12 +81,15 @@ const ga = import.meta.env.PROD;
   <meta property="og:image:alt" content={shareAlt}>
   {isCard && <meta property="og:image:width" content="1200">}
   {isCard && <meta property="og:image:height" content="630">}
+  {!isCard && imageSize && <meta property="og:image:width" content={String(imageSize[0])}>}
+  {!isCard && imageSize && <meta property="og:image:height" content={String(imageSize[1])}>}
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content={title}>
   <meta name="twitter:description" content={description}>
   <meta name="twitter:image" content={ogImage}>
   <meta name="twitter:image:alt" content={shareAlt}>
   {post && <meta property="article:published_time" content={`${post.published}T00:00:00Z`}>}
+  {published && <meta property="article:published_time" content={`${published}T00:00:00Z`}>}
   <meta name="twitter:site" content={site.twitter}>
   <meta name="author" content={site.author}>
 

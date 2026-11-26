@@ -15,6 +15,8 @@ const ld = {
   '@id': CHARTER_ID,
   url: `${SITE}/hip-charter/`,
   mainEntityOfPage: `${SITE}/hip-charter/`,
+  name: frontmatter.title,
+  alternateName: ['HIP Charter'],
   headline: frontmatter.title,
   alternativeHeadline: 'HIP Charter',
   description,
@@ -25,8 +27,10 @@ const ld = {
   publisher: { '@id': `${SITE}/#organization` },
   isPartOf: { '@id': `${SITE}/#website` },
   identifier: { '@type': 'PropertyValue', propertyID: 'DOI', value: '10.5281/zenodo.19078843' },
-  sameAs: ['https://doi.org/10.5281/zenodo.19078843', 'https://nikhilsinghal-ai-trust-commons.medium.com/the-human-intelligence-partnership-charter-3cb893e1d5f0'],
+  sameAs: ['https://doi.org/10.5281/zenodo.19078843', 'https://zenodo.org/records/19078843', 'https://nikhilsinghal-ai-trust-commons.medium.com/the-human-intelligence-partnership-charter-3cb893e1d5f0'],
   about: [{ '@type': 'Thing', name: 'Human-AI partnership' }, { '@type': 'Thing', name: 'AI governance' }],
+  isAccessibleForFree: true,
+  subjectOf: { '@id': `${SITE}/blog/2026/03/17/stop-calling-it-artificial/#article`, url: `${SITE}/blog/2026/03/17/stop-calling-it-artificial/` },
   inLanguage: 'en',
   license: 'https://creativecommons.org/licenses/by/4.0/',
 };
@@ -36,11 +40,15 @@ const ld = {
   description={description}
   image={hero}
   imageAlt="A human silhouette and an AI wireframe figure reaching toward each other across a gap filled with falling code fragments"
+  imageSize={[1280, 720]}
+  published="2026-03-17"
   current="hip"
   ld={ld}
   markdownAlt="/hip-charter.md"
 >
   <div class="page">
+    {/* ids the old hipcharter.com pages had at the top, so links to them still land */}
+    <span id="the-human-intelligence-partnership-charter"></span><span id="stop-calling-it-artificial"></span><span id="stop-calling-it-artificial-start-building-with-intelligence"></span>
     <h1 class="page-title">{frontmatter.title}</h1>
     <p class="lede">{frontmatter.subtitle}</p>
     <div class="meta">
