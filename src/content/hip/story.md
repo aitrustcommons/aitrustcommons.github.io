@@ -57,7 +57,7 @@ The HIP Charter diagram went through eight major concept versions on March 16, 2
 | v7 | Combination lattice | 28 connection lines between rows created visual noise. |
 | v8 | Split-color cards | Color encodes lineage. No lines needed. |
 
-![The full HIP Charter combination lattice poster showing all 15 positions across four patterns of partnership](images/hip-charter-combination-lattice-full-poster.png)
+![The full HIP Charter combination lattice poster showing all 15 positions across four patterns of partnership](/hip-charter/images/hip-charter-combination-lattice-full-poster.png)
 
 *The v8 combination lattice. 15 positions on the map. Split-color backgrounds encode which patterns intersect at each position. The organic wave boundary between colors stands for partnership between equals.*
 
@@ -87,6 +87,6 @@ Intent expressed. Risk identified. Concept evolved. Decision made. Documented.
 
 That is governance as partnership. The HIP Charter argues for exactly that.
 
-[Read the charter](../)
+[Read the charter](/hip-charter/)
 
 *© 2026 Nikhil Singhal. Published by AI Trust Commons. Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).*

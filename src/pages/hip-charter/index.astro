@@ -1,0 +1,57 @@
+---
+// The HIP Charter. Moved here from hipcharter.com in Nov 2026 (#625).
+// The words live in src/content/hip/charter.md; old section names are kept so shared links still land.
+import Base from '../../layouts/Base.astro';
+import { Content, frontmatter } from '../../content/hip/charter.md';
+
+const SITE = 'https://aitrustcommons.org';
+const CHARTER_ID = `${SITE}/hip-charter/#charter`;
+const author = { '@type': 'Person', '@id': 'https://nikhilsinghal.com/#person', name: 'Nikhil Singhal', url: 'https://nikhilsinghal.com' };
+const description = 'The HIP Charter by Nikhil Singhal: four patterns of human-AI partnership, 15 positions on the map and the gap between human intent and machine execution at every pattern.';
+const hero = '/hip-charter/images/hip-charter-hero-human-ai-intent-gap.jpeg';
+const ld = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  '@id': CHARTER_ID,
+  url: `${SITE}/hip-charter/`,
+  mainEntityOfPage: `${SITE}/hip-charter/`,
+  headline: frontmatter.title,
+  alternativeHeadline: 'HIP Charter',
+  description,
+  image: `${SITE}${hero}`,
+  datePublished: '2026-03-17T00:00:00Z',
+  dateModified: '2026-11-25T00:00:00Z',
+  author,
+  publisher: { '@id': `${SITE}/#organization` },
+  isPartOf: { '@id': `${SITE}/#website` },
+  identifier: { '@type': 'PropertyValue', propertyID: 'DOI', value: '10.5281/zenodo.19078843' },
+  sameAs: ['https://doi.org/10.5281/zenodo.19078843', 'https://nikhilsinghal-ai-trust-commons.medium.com/the-human-intelligence-partnership-charter-3cb893e1d5f0'],
+  about: [{ '@type': 'Thing', name: 'Human-AI partnership' }, { '@type': 'Thing', name: 'AI governance' }],
+  inLanguage: 'en',
+  license: 'https://creativecommons.org/licenses/by/4.0/',
+};
+---
+<Base
+  title="HIP Charter: the Human Intelligence Partnership Charter"
+  description={description}
+  image={hero}
+  imageAlt="A human silhouette and an AI wireframe figure reaching toward each other across a gap filled with falling code fragments"
+  current="hip"
+  ld={ld}
+  markdownAlt="/hip-charter.md"
+>
+  <div class="page">
+    <h1 class="page-title">{frontmatter.title}</h1>
+    <p class="lede">{frontmatter.subtitle}</p>
+    <div class="meta">
+      <a class="author" href="/about/">Nikhil Singhal</a>
+      <span>March 2026</span>
+      <a href="/hip-charter/story/">How it was made</a>
+      <a href="/hip-charter.md">Plain text</a>
+    </div>
+    <p class="hip-link">The HIP Charter is the premise behind <a href="/">the picture</a>: treat AI as a second form of intelligence, and design how the two work together. The picture shows that work governed at every handoff.</p>
+    <div class="prose">
+      <Content />
+    </div>
+  </div>
+</Base>

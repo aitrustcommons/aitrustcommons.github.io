@@ -1,5 +1,5 @@
 ---
-interface Props { current?: 'home' | 'blog' | 'about' }
+interface Props { current?: 'home' | 'hip' | 'blog' | 'about' }
 const { current } = Astro.props;
 ---
 <header class="site-header">
@@ -9,6 +9,7 @@ const { current } = Astro.props;
       AI Trust Commons
     </a>
     <nav class="site-nav" aria-label="Site">
+      <a href="/hip-charter/" aria-current={current === 'hip' ? 'page' : undefined}>HIP Charter</a>
       <a href="/blog/" aria-current={current === 'blog' ? 'page' : undefined}>Blog</a>
       <a href="/about/" aria-current={current === 'about' ? 'page' : undefined}>About</a>
     </nav>

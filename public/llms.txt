@@ -8,6 +8,7 @@ Writing is licensed CC BY 4.0. Credit Nikhil Singhal.
 
 - [AI governance in practice, plain text](https://aitrustcommons.org/ai-governance-in-practice.md): the home page's words without the design
 - [About Nikhil Singhal](https://aitrustcommons.org/about/): who he is and his published work
+- [The HIP Charter](https://aitrustcommons.org/hip-charter/): the Human Intelligence Partnership Charter. Four patterns of human-AI partnership and the gap between human intent and machine execution at every pattern. Plain text: https://aitrustcommons.org/hip-charter.md
 - [From Instinct to Intent™](https://aitrustcommons.org/blog/category/from-instinct-to-intent-series/): his article series on the gap between what a person means and what the machine does
 - [Blog](https://aitrustcommons.org/blog/): all posts
 

@@ -1,0 +1,41 @@
+---
+// How the HIP Charter Was Made. Moved here from hipcharter.com in Nov 2026 (#625).
+// The words live in src/content/hip/story.md; old section names are kept so shared links still land.
+import Base from '../../../layouts/Base.astro';
+import { Content, frontmatter } from '../../../content/hip/story.md';
+
+const SITE = 'https://aitrustcommons.org';
+const CHARTER_ID = `${SITE}/hip-charter/#charter`;
+const author = { '@type': 'Person', '@id': 'https://nikhilsinghal.com/#person', name: 'Nikhil Singhal', url: 'https://nikhilsinghal.com' };
+const description = 'Twelve steps to name the HIP Charter and eight drawings in one day. A person and an AI working as partners, with the person steering.';
+const ld = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  '@id': `${SITE}/hip-charter/story/#article`,
+  url: `${SITE}/hip-charter/story/`,
+  mainEntityOfPage: `${SITE}/hip-charter/story/`,
+  headline: frontmatter.title,
+  description,
+  datePublished: '2026-03-17T00:00:00Z',
+  dateModified: '2026-11-25T00:00:00Z',
+  author,
+  publisher: { '@id': `${SITE}/#organization` },
+  isPartOf: { '@id': `${SITE}/#website` },
+  about: { '@id': CHARTER_ID },
+  inLanguage: 'en',
+  license: 'https://creativecommons.org/licenses/by/4.0/',
+};
+---
+<Base title={frontmatter.title} description={description} current="hip" ld={ld}>
+  <div class="page">
+    <p class="kicker"><a href="/hip-charter/">THE HIP CHARTER</a></p>
+    <h1 class="page-title">{frontmatter.title}</h1>
+    <div class="meta">
+      <a class="author" href="/about/">Nikhil Singhal</a>
+      <span>March 2026</span>
+    </div>
+    <div class="prose">
+      <Content />
+    </div>
+  </div>
+</Base>

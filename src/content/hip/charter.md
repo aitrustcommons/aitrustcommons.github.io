@@ -7,11 +7,11 @@ source: "hipcharter.com/ and hipcharter.com/charter/, merged Nov 2026. Light-tou
 
 As long as we call it Artificial Intelligence, we give ourselves permission to skip the communication infrastructure we would build for any human colleague. The HIP Charter starts with a different premise.
 
-![A human silhouette and an AI wireframe figure reaching toward each other across a gap filled with falling code fragments, representing the intent gap between human meaning and machine execution](images/hip-charter-hero-human-ai-intent-gap.jpeg)
+![A human silhouette and an AI wireframe figure reaching toward each other across a gap filled with falling code fragments, representing the intent gap between human meaning and machine execution](/hip-charter/images/hip-charter-hero-human-ai-intent-gap.jpeg)
 
 You have felt this. You typed something into an AI tool, got something back that was not quite what you meant, and spent the next twenty minutes trying to explain the gap between what you said and what you actually wanted. That gap is a structural problem. The word "artificial" is part of why it exists.
 
-![The Human Intelligence Partnership Charter: 15 positions across four patterns of human-AI partnership, from Foundation through Integration, showing pairwise overlaps, triple intersections, and the center where all four converge](images/hip-charter-combination-lattice-full-poster.png)
+![The Human Intelligence Partnership Charter: 15 positions across four patterns of human-AI partnership, from Foundation through Integration, showing pairwise overlaps, triple intersections, and the center where all four converge](/hip-charter/images/hip-charter-combination-lattice-full-poster.png)
 
 *Figure: The HIP Charter combination lattice. Four patterns (Foundation, Tooling, Pipeline, Integration) create six pairwise overlaps, four triple intersections and one center representing full partnership. 15 positions on the map. Color encodes lineage: green for Foundation, blue for Tooling, gold for Pipeline, purple for Integration.*
 
@@ -75,7 +75,7 @@ The HIP Charter describes four patterns of human-AI partnership. They are petals
 
 New petals can be added as new kinds of AI emerge: world models, embodied AI, whatever comes next. The charter grows with them.
 
-![The four patterns of human-AI partnership: Foundation, Tooling, Pipeline, and Integration, each showing what the human brings and what AI brings](images/hip-charter-four-patterns-foundation-tooling-pipeline-integration.png)
+![The four patterns of human-AI partnership: Foundation, Tooling, Pipeline, and Integration, each showing what the human brings and what AI brings](/hip-charter/images/hip-charter-four-patterns-foundation-tooling-pipeline-integration.png)
 
 *The four patterns. Each card shows the human contribution and the AI contribution. Color encodes identity: green (Foundation), blue (Tooling), gold (Pipeline), purple (Integration).*
 
@@ -118,7 +118,7 @@ The four patterns create meaningful intersections. Each overlap tells a differen
 | Tooling + Integration | Human tools within an AI-integrated system |
 | Pipeline + Integration | Data pipelines feeding AI reasoning engines. Where the richest products live. |
 
-![Six pairwise overlaps of the HIP Charter patterns, each with split-color backgrounds showing the two parent patterns meeting at an organic wave boundary](images/hip-charter-six-pairwise-overlaps.png)
+![Six pairwise overlaps of the HIP Charter patterns, each with split-color backgrounds showing the two parent patterns meeting at an organic wave boundary](/hip-charter/images/hip-charter-six-pairwise-overlaps.png)
 
 *The six pairwise overlaps. Split-color backgrounds encode lineage: each card's two colors show which patterns intersect. The organic wave boundary stands for partnership between equals.*
 
@@ -130,7 +130,7 @@ Here a system works across three patterns at once. This is where the most sophis
 
 Full partnership. Two intelligences, every pattern. This is rare. This is what the charter describes at its fullest expression.
 
-![Four triple intersections and the center of the HIP Charter where all four patterns converge, with three-way and four-way split-color backgrounds](images/hip-charter-convergence-triples-center.png)
+![Four triple intersections and the center of the HIP Charter where all four patterns converge, with three-way and four-way split-color backgrounds](/hip-charter/images/hip-charter-convergence-triples-center.png)
 
 *Convergence. The four triple intersections and the center where all four patterns meet. Three-way and four-way split colors show increasing depth of partnership. The center card: "The human decides what, the AI executes how, and the architecture survives regardless of which engine powers it."*
 
@@ -166,7 +166,7 @@ At every pattern of the HIP Charter, the same structural gap exists: the distanc
 
 This is the Intent Layer. It names the missing interface between human intent and machine execution. When this charter was written, nothing filled that gap. CenterEye ([centereye.ai](https://centereye.ai)) has since turned part of the idea into a product.
 
-![The Intent Layer gap zone showing two boxes: the Intent Layer as the structural approach we can see today, and Unknown representing solutions we have not imagined yet](images/hip-charter-intent-layer-gap.png)
+![The Intent Layer gap zone showing two boxes: the Intent Layer as the structural approach we can see today, and Unknown representing solutions we have not imagined yet](/hip-charter/images/hip-charter-intent-layer-gap.png)
 
 *The current gap. The Intent Layer is the structural approach visible today. The Unknown box stands for what we can't see yet: future models may close this gap in ways we have not imagined. Both sit between the partnership and the AI engines.*
 
@@ -176,7 +176,7 @@ Today's models work through natural language. This gap exists with them. Future 
 
 ## The Full Map
 
-![The complete HIP Charter combination lattice: four patterns, six pairwise overlaps, four triple intersections, and the center where all four converge, showing 15 positions on the map of human-AI partnership](images/hip-charter-combination-lattice-full-poster.png)
+![The complete HIP Charter combination lattice: four patterns, six pairwise overlaps, four triple intersections, and the center where all four converge, showing 15 positions on the map of human-AI partnership](/hip-charter/images/hip-charter-combination-lattice-full-poster.png)
 
 This is the complete picture. Four patterns at the top. Six pairwise overlaps where any two patterns intersect. Four triple intersections where three patterns converge at once. And one center where all four meet: full partnership between two intelligences. 15 positions on the map. Every position represents a different way human and AI intelligence can work together. No position is "best." The useful question is where you are now and where you want to go next.
 
@@ -223,7 +223,7 @@ Twelve steps. Human insight drove every critical turn: identifying risks, reject
 
 That is the HIP Charter in action. At the Foundation pattern. Using the same partnership dynamics the charter describes. The governance worked at every step.
 
-The full account, with all twelve steps and the eight drawings, is in [How the HIP Charter Was Made](story/).
+The full account, with all twelve steps and the eight drawings, is in [How the HIP Charter Was Made](/hip-charter/story/).
 
 ## What Is Permanent, What May Change
 

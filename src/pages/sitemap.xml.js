@@ -6,6 +6,7 @@ import home from '../data/home.json';
 
 const SITE = 'https://aitrustcommons.org';
 const ABOUT_UPDATED = '2026-11-25';
+const HIP_UPDATED = '2026-11-25';
 
 export async function GET() {
   const posts = await allPosts();
@@ -14,6 +15,8 @@ export async function GET() {
     ['/', home.updated],
     ['/blog/', newest],
     ['/blog/category/from-instinct-to-intent-series/', newest],
+    ['/hip-charter/', HIP_UPDATED],
+    ['/hip-charter/story/', HIP_UPDATED],
     ['/about/', ABOUT_UPDATED],
     ['/picture/', home.updated],
     ...posts.map(({ post }) => [postPath(post), isoDay(post)]),

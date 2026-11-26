@@ -40,7 +40,8 @@ const POSTS = [
 ];
 const SERIES = '/blog/category/from-instinct-to-intent-series/';
 const FORWARDS = { '/framework/': '/', '/standards/': '/about/', '/blog/archive/2026/': '/blog/', '/blog/category/standards/': '/blog/' };
-const PAGES = ['/', '/about/', '/blog/', SERIES, '/picture/', ...POSTS];
+const HIP = ['/hip-charter/', '/hip-charter/story/'];
+const PAGES = ['/', '/about/', '/blog/', SERIES, '/picture/', ...HIP, ...POSTS];
 
 console.log(`Checking ${BASE}\n\nOld addresses`);
 for (const p of PAGES) check((await get(p)).status === 200, `${p} answers 200`);
@@ -133,6 +134,24 @@ const ldTypes = (html) => [...html.matchAll(/<script type="application\/ld\+json
 check(ldTypes((await get('/')).html).includes('Article'), 'the home page is marked up as an Article by Nikhil Singhal');
 check(ldTypes((await get('/about/')).html).includes('ProfilePage'), 'About is marked up as a ProfilePage');
 check(ldTypes((await get(SERIES)).html).includes('CreativeWorkSeries'), 'the series page is marked up as a CreativeWorkSeries');
+// The HIP Charter moved here from hipcharter.com. Section links shared from the old site must still land.
+const HIP_ANCHORS = {
+  '/hip-charter/': ['why-charter', 'the-premise', 'the-premise-just-intelligence', 'three-concepts-one-thesis', 'four-patterns-of-partnership',
+    'the-four-patterns', 'the-overlaps-where-depth-lives', 'the-6-pairwise-overlaps', 'the-4-triple-overlaps', 'the-center-all-four',
+    'total-positions-15', 'the-wrapper-distinction', 'the-gap-at-every-pattern', 'the-intent-layer-at-every-pattern', 'the-full-map',
+    'adoption-for-companies-and-individuals', 'for-companies', 'for-individuals', 'extensibility', 'how-this-charter-was-named',
+    'what-is-permanent-what-may-change', 'connection-to-the-series', 'part-of-the-from-instinct-to-intenttm-series'],
+  '/hip-charter/story/': ['the-problem', 'the-partnership-that-named-it', '8-visual-iterations-in-one-day', 'multi-model-validation', 'the-governance-that-worked'],
+};
+for (const [p, ids] of Object.entries(HIP_ANCHORS)) {
+  const html = (await get(p)).html;
+  const gone = ids.filter((id) => !html.includes(`id="${id}"`));
+  check(gone.length === 0, `${p} keeps the old hipcharter.com section links${gone.length ? ' (missing: ' + gone.join(', ') + ')' : ''}`);
+}
+check(ldTypes((await get('/hip-charter/')).html).includes('Article') && (await get('/hip-charter/')).html.includes('10.5281/zenodo.19078843'), 'the HIP Charter is marked up as an Article with its DOI');
+const hipMd = await get('/hip-charter.md');
+check(hipMd.status === 200 && hipMd.html.startsWith('# The Human Intelligence Partnership Charter') && !hipMd.html.includes('<span'), 'the HIP Charter has a plain-text copy');
+check((await get('/')).html.includes('href="/hip-charter/"'), 'the header links to the HIP Charter');
 check((rss.html.match(/<dc:creator>Nikhil Singhal<\/dc:creator>/g) || []).length === 6, 'every RSS item names Nikhil Singhal');
 check(!Object.keys(FORWARDS).some((p) => locs.includes(p)), 'the sitemap lists no forwarded address');
 const robots = await get('/robots.txt');
